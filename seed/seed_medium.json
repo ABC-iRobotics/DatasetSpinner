@@ -1,0 +1,120 @@
+[
+    {
+        "instruction": "Move to the assembly sector to collect machine components, then transport them to the production facility. After unloading, proceed to the storage site to pick up a shipment of lubricants and deliver them to the engineering lab.",
+        "json": {
+            "instruction": [
+                { "action": "go_to", "location": "assembly sector", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "assembly sector", "object": [{ "description": "machine components", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "production facility", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "production facility", "object": [{ "description": "machine components", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "storage site", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "storage site", "object": [{ "description": "shipment of lubricants", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "engineering lab", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "engineering lab", "object": [{ "description": "shipment of lubricants", "num": "some" }], "duration": null }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the distribution center, pick up a crate of sensors, and deliver them to the calibration room. After unloading, move to the operations hub for system diagnostics, wait for 15 minutes, then return to the start position.",
+        "json": {
+            "instruction": [
+                { "action": "go_to", "location": "distribution center", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "distribution center", "object": [{ "description": "crate of sensors", "num": "1" }], "duration": null },
+                { "action": "go_to", "location": "calibration room", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "calibration room", "object": [{ "description": "crate of sensors", "num": "1" }], "duration": null },
+                { "action": "go_to", "location": "operations hub", "object": null, "duration": null },
+                { "action": "wait_for_seconds", "location": "operations hub", "object": null, "duration": 900 },
+                { "action": "go_to", "location": "start position", "object": null, "duration": null }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the logistics bay to collect an electronics module, then transport it to the test station. After quality verification, move to the warehouse to retrieve a batch of resistors and deliver them to the assembly workshop.",
+        "json": {
+            "instruction": [
+                { "action": "go_to", "location": "logistics bay", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "logistics bay", "object": [{ "description": "electronics module", "num": "1" }], "duration": null },
+                { "action": "go_to", "location": "test station", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "test station", "object": [{ "description": "electronics module", "num": "1" }], "duration": null },
+                { "action": "go_to", "location": "warehouse", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "warehouse", "object": [{ "description": "batch of resistors", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "assembly workshop", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "assembly workshop", "object": [{ "description": "batch of resistors", "num": "some" }], "duration": null }
+            ]
+        }
+    },
+    {
+        "instruction": "Move to the repair zone, collect a diagnostic toolkit, and transport it to the maintenance area. Once delivered, travel to the supply room to pick up replacement fuses and take them to the control station.",
+        "json": {
+            "instruction": [
+                { "action": "go_to", "location": "repair zone", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "repair zone", "object": [{ "description": "diagnostic toolkit", "num": "1" }], "duration": null },
+                { "action": "go_to", "location": "maintenance area", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "maintenance area", "object": [{ "description": "diagnostic toolkit", "num": "1" }], "duration": null },
+                { "action": "go_to", "location": "supply room", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "supply room", "object": [{ "description": "replacement fuses", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "control station", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "control station", "object": [{ "description": "replacement fuses", "num": "some" }], "duration": null }
+            ]
+        }
+    },
+    {
+        "instruction": "Head to the material depot to collect steel rods, then transport them to the manufacturing plant. After unloading, proceed to the central warehouse to pick up a batch of electrical components and deliver them to the assembly line. Wait for 10 minutes, then return to the main control center.",
+        "json": {
+            "instruction": [
+                { "action": "go_to", "location": "material depot", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "material depot", "object": [{ "description": "steel rods", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "manufacturing plant", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "manufacturing plant", "object": [{ "description": "steel rods", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "central warehouse", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "central warehouse", "object": [{ "description": "batch of electrical components", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "assembly line", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "assembly line", "object": [{ "description": "batch of electrical components", "num": "some" }], "duration": null },
+                { "action": "wait_for_seconds", "location": "assembly line", "object": null, "duration": 600 },
+                { "action": "go_to", "location": "main control center", "object": null, "duration": null }
+            ]
+        }
+    },
+    {
+        "instruction": "Move to the fuel station to refuel, then travel to the repair workshop for scheduled maintenance. Wait there for 30 minutes before proceeding to the operations base for a final system check.",
+        "json": {
+            "instruction": [
+                { "action": "go_to", "location": "fuel station", "object": null, "duration": null },
+                { "action": "wait_for_seconds", "location": "fuel station", "object": null, "duration": 600 },
+                { "action": "go_to", "location": "repair workshop", "object": null, "duration": null },
+                { "action": "wait_for_seconds", "location": "repair workshop", "object": null, "duration": 1800 },
+                { "action": "go_to", "location": "operations base", "object": null, "duration": null }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the shipping dock to pick up an order of mechanical gears. Transport them to the gear assembly station for processing. Next, move to the inspection unit for a quality check, then transport any defective gears back to the return area before heading back to the dispatch hub.",
+        "json": {
+            "instruction": [
+                { "action": "go_to", "location": "shipping dock", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "shipping dock", "object": [{ "description": "order of mechanical gears", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "gear assembly station", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "gear assembly station", "object": [{ "description": "order of mechanical gears", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "inspection unit", "object": null, "duration": null },
+                { "action": "wait_for_seconds", "location": "inspection unit", "object": null, "duration": 900 },
+                { "action": "go_to", "location": "return area", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "return area", "object": [{ "description": "defective gears", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "dispatch hub", "object": null, "duration": null }
+            ]
+        }
+    },
+    {
+        "instruction": "Navigate to the storage yard, load a batch of replacement parts, and deliver them to the vehicle maintenance center. After unloading, move to the logistics station for inventory processing, wait for 20 minutes, then return to the starting zone.",
+        "json": {
+            "instruction": [
+                { "action": "go_to", "location": "storage yard", "object": null, "duration": null },
+                { "action": "wait_for_payload_ready", "location": "storage yard", "object": [{ "description": "batch of replacement parts", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "vehicle maintenance center", "object": null, "duration": null },
+                { "action": "wait_for_payload_removal", "location": "vehicle maintenance center", "object": [{ "description": "batch of replacement parts", "num": "some" }], "duration": null },
+                { "action": "go_to", "location": "logistics station", "object": null, "duration": null },
+                { "action": "wait_for_seconds", "location": "logistics station", "object": null, "duration": 1200 },
+                { "action": "go_to", "location": "starting zone", "object": null, "duration": null }
+            ]
+        }
+    }
+]
