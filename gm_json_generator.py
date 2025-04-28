@@ -23,12 +23,13 @@ class InstructionJSONPair(BaseModel):
     json: InstructionJSON
 
 class GM_JSONGenerator:
-    def __init__(self, openai_api_key: str = None):
+    def __init__(self, openai_api_key: str = None, model: str = "gpt-4.1"):
         # Ensure the API key is set in the environment
         if os.getenv('OPENAI_API_KEY') is None:
             raise ValueError("An OpenAI API key must be set in the OPENAI_API_KEY environment variable.")
         # Initialize the OpenAI client using the provided API key.
         self.client = openai.OpenAI()
+        self.model = model
 
     def generate_json(self, new_instructions: List[str], examples: Dict[str, Any], instruction_type: str, system_prompt: str = "") -> Tuple[List[Tuple[str, Any]], str]:
         """
@@ -80,7 +81,7 @@ class GM_JSONGenerator:
 
             # Call the OpenAI API using the beta chat completions parser and our updated response format.
             completion = self.client.beta.chat.completions.parse(
-                model="gpt-4o",
+                model=self.model,
                 messages=[
                     {"role": "system", "content": conversion_system_prompt},
                     {"role": "user", "content": user_prompt}

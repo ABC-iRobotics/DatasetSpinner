@@ -9,13 +9,14 @@ class GeneratedInstructions(BaseModel):
     instructions: List[str]
 
 class GM_InstructionGenerator:
-    def __init__(self, openai_api_key: str = None):
+    def __init__(self, openai_api_key: str = None, model: str = "gpt-4.1"):
         # Check the API key presence in environment variable
         if os.getenv('OPENAI_API_KEY') is None:
             raise ValueError("An OpenAI API key must be set in the OPENAI_API_KEY environment variable.")
 
         # Initialize the OpenAI client using the provided example
         self.client = openai.OpenAI()
+        self.model = model
 
     def generate_instructions(self, sample_instructions: List[str], seed_type: str = "", system_prompt: str = "", num_of_new_instructions: int = 20) -> Tuple[List[str], str]:
         """
@@ -40,7 +41,7 @@ class GM_InstructionGenerator:
         
         # Call the OpenAI API using the beta chat completions parser
         completion = self.client.beta.chat.completions.parse(
-            model="gpt-4o",
+            model=self.model,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}

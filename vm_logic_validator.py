@@ -33,11 +33,12 @@ class ValidatedSolution(BaseModel):
     json: Optional[InstructionJSON] = None
 
 class VM_LogicValidator:
-    def __init__(self, openai_api_key: str = None):
+    def __init__(self, openai_api_key: str = None, model: str = "gpt-4.1"):
         # Ensure the API key is set in the environment.
         if os.getenv('OPENAI_API_KEY') is None:
             raise ValueError("An OpenAI API key must be set in the OPENAI_API_KEY environment variable.")
         self.client = openai.OpenAI()
+        self.model = model
 
     def validate_logic(self, instruction_json_pairs: List[Tuple[str, Any]], instruction_type: str, system_prompt: str = "") -> Tuple[List[Tuple[str, Any]], str]:
         """
@@ -61,34 +62,16 @@ class VM_LogicValidator:
 
         for instruction, orig_json in instruction_json_pairs:
             user_prompt = (
-                "Check if the following JSON logically fulfills the instruction.\n\n"
+                "Check if the provided JSON logically fulfills this instruction.\n\n"
                 "Instruction:\n"
                 f"{instruction}\n\n"
                 "Provided JSON:\n"
                 f"{json.dumps(orig_json, indent=2)}\n\n"
-                "If the JSON is logically correct and satisfies the instruction, reply with exactly:\n"
-                "```json\n"
-                "{\n"
-                "  \"result\": \"OK\"\n"
-                "}\n"
-                "```\n"
-                "If not, provide a refined version that follows this exact format:\n\n"
-                "```json\n"
-                "{\n"
-                "  \"instruction\": \"<original instruction>\",\n"
-                "  \"json\": {\n"
-                "    \"instruction\": [\n"
-                "      { \"action\": \"<action>\", \"location\": \"<location or null>\", \"object\": <object or null>, \"duration\": <duration or null> }\n"
-                "    ]\n"
-                "  }\n"
-                "}\n"
-                "```\n\n"
-                "Return only the JSON response without any extra text."
             )
 
             # Call the OpenAI API (using beta chat completions parser) for logic validation.
             completion = self.client.beta.chat.completions.parse(
-                model="gpt-4o",
+                model=self.model,
                 messages=[
                     {"role": "system", "content": logic_system_prompt},
                     {"role": "user", "content": user_prompt}

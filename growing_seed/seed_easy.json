@@ -231,5 +231,50 @@
                 { "action": "go_to", "location": "main hub", "object": null, "duration": null }
             ]
         }
+    },
+        {
+      "instruction": "Move to the greenhouse, pick up flower pots, and drop them at the garden entrance.",
+      "json": {"instruction": [
+        {"action": "go_to", "location": "greenhouse", "object": null, "duration": null},
+        {"action": "wait_for_payload_ready", "location": "greenhouse", "object": [{"description": "flower pots", "num": "some"}], "duration": null},
+        {"action": "go_to", "location": "garden entrance", "object": null, "duration": null},
+        {"action": "wait_for_payload_removal", "location": "garden entrance", "object": [{"description": "flower pots", "num": "some"}], "duration": null}
+      ]}
+    },
+    {
+      "instruction": "Collect boxes from the loading bay and deliver them to storage room 2.",
+      "json": {"instruction": [
+        {"action": "go_to", "location": "loading bay", "object": null, "duration": null},
+        {"action": "wait_for_payload_ready", "location": "loading bay", "object": [{"description": "boxes", "num": "some"}], "duration": null},
+        {"action": "go_to", "location": "storage room 2", "object": null, "duration": null},
+        {"action": "wait_for_payload_removal", "location": "storage room 2", "object": [{"description": "boxes", "num": "some"}], "duration": null}
+      ]}
+    },
+    {
+      "instruction": "Retrieve fertilizer bags from shed A and drop them off at the orchard gate.",
+      "json": {"instruction": [
+        {"action": "go_to", "location": "shed A", "object": null, "duration": null},
+        {"action": "wait_for_payload_ready", "location": "shed A", "object": [{"description": "fertilizer bags", "num": "some"}], "duration": null},
+        {"action": "go_to", "location": "orchard gate", "object": null, "duration": null},
+        {"action": "wait_for_payload_removal", "location": "orchard gate", "object": [{"description": "fertilizer bags", "num": "some"}], "duration": null}
+      ]}
+    },
+    {
+      "instruction": "Pick up harvested carrots from the vegetable patch and take them to the farmhouse.",
+      "json": {"instruction": [
+        {"action": "go_to", "location": "vegetable patch", "object": null, "duration": null},
+        {"action": "wait_for_payload_ready", "location": "vegetable patch", "object": [{"description": "harvested carrots", "num": "some"}], "duration": null},
+        {"action": "go_to", "location": "farmhouse", "object": null, "duration": null},
+        {"action": "wait_for_payload_removal", "location": "farmhouse", "object": [{"description": "harvested carrots", "num": "some"}], "duration": null}
+      ]}
+    },
+    {
+      "instruction": "Transport sandbags from the depot to floodgate 3.",
+      "json": {"instruction": [
+        {"action": "go_to", "location": "depot", "object": null, "duration": null},
+        {"action": "wait_for_payload_ready", "location": "depot", "object": [{"description": "sandbags", "num": "some"}], "duration": null},
+        {"action": "go_to", "location": "floodgate 3", "object": null, "duration": null},
+        {"action": "wait_for_payload_removal", "location": "floodgate 3", "object": [{"description": "sandbags", "num": "some"}], "duration": null}
+      ]}
     }
 ]

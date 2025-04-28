@@ -1,7 +1,7 @@
 import json
 import os
 import random
-from typing import List, Optional, Any
+from typing import List, Optional, Any, Dict
 
 class SamplePicker:
     def __init__(self, seed_folder: str):
@@ -10,8 +10,8 @@ class SamplePicker:
         Expects the following files in the folder: seed_easy.json, seed_medium.json, seed_hard.json.
         """
         self.seed_folder = seed_folder
-        self.seeds = {}  # stores the loaded seed data per type
-        self.unchosen_indices = {}  # tracks indices that haven't been picked yet
+        self.seeds: Dict[str, List[Dict[str, Any]]] = {}  # stores the loaded seed data per type
+        self.unchosen_indices: Dict[str, List[int]] = {}  # tracks indices that haven't been picked yet
 
         for seed_type in ["easy", "medium", "hard"]:
             file_path = os.path.join(seed_folder, f"seed_{seed_type}.json")
@@ -30,109 +30,70 @@ class SamplePicker:
                 self.seeds[seed_type] = []
                 self.unchosen_indices[seed_type] = []
 
-    def get_instructions(self, seed_type: str, num_samples: int) -> Optional[dict]:
+    def get_instructions(self, seed_type: str, num_samples: int) -> Optional[Dict[str, Any]]:
         """
         Returns a JSON object containing a list of sample instructions from the specified seed type.
         Samples are chosen evenly across the unchosen samples. If there are not enough unchosen samples,
         the method returns None.
-
-        Args:
-            seed_type (str): The type of seed to pick from ("easy", "medium", "hard").
-            num_samples (int): The number of samples to return.
-
-        Returns:
-            Optional[dict]: A JSON object with key "samples" containing a list of instruction strings,
-                            or None if there are insufficient unchosen samples.
         """
         if seed_type not in self.seeds:
             print(f"Unknown seed type: {seed_type}")
             return None
 
-        available_indices = sorted(self.unchosen_indices[seed_type])
-        total_available = len(available_indices)
-        if total_available < num_samples:
-            # Not enough unchosen samples remain
+        available = sorted(self.unchosen_indices[seed_type])
+        total = len(available)
+        if total < num_samples:
             return None
 
-        # Divide available indices into roughly equal segments and choose one index per segment.
-        segment_size = total_available / num_samples
-        chosen_indices = []
+        segment = total / num_samples
+        chosen = []
         for i in range(num_samples):
-            start = int(round(i * segment_size))
-            end = int(round((i + 1) * segment_size))
-            # Ensure we have a non-empty segment
-            segment = available_indices[start:end]
-            if not segment:
-                segment = [available_indices[start]]
-            chosen_index = random.choice(segment)
-            chosen_indices.append(chosen_index)
+            start = int(round(i * segment))
+            end = int(round((i + 1) * segment))
+            block = available[start:end] or [available[start]]
+            idx = random.choice(block)
+            chosen.append(idx)
 
-        # Remove the chosen indices from the unchosen tracker.
-        self.unchosen_indices[seed_type] = [
-            idx for idx in self.unchosen_indices[seed_type] if idx not in chosen_indices
-        ]
+        # mark chosen indices
+        self.unchosen_indices[seed_type] = [i for i in self.unchosen_indices[seed_type] if i not in chosen]
 
-        # Build a list of instruction strings from the chosen samples.
-        samples = [self.seeds[seed_type][idx]["instruction"] for idx in chosen_indices]
+        samples = [self.seeds[seed_type][i]["instruction"] for i in chosen]
         return {"samples": samples}
 
-    def get_full_examples(self, seed_type: str, num_examples: int) -> Optional[dict[str, Any]]:
+    def get_full_examples(self, seed_type: str, num_examples: int) -> Optional[Dict[str, Any]]:
         """
-        Returns a JSON object containing a list of full (instruction + json) entries 
-        from the specified seed type. Entries are chosen evenly across the unchosen 
-        samples. If there are not enough unchosen samples, the method returns None.
-    
-        Args:
-            seed_type (str): The type of seed to pick from ("easy", "medium", "hard").
-            num_examples (int): The number of examples to return.
-    
-        Returns:
-            Optional[dict]: A JSON object with key "samples" containing a list of 
-                            objects with "instruction" and "json" fields,
-                            or None if there are insufficient unchosen samples.
+        Returns a JSON object containing full instruction+json entries for the specified seed type.
+        Samples are chosen evenly across unchosen; returns None if insufficient.
         """
-        # Ensure the seed type exists
         if seed_type not in self.seeds:
             print(f"Unknown seed type: {seed_type}")
             return None
-    
-        # Get the current unchosen indices for this seed type
-        available_indices = sorted(self.unchosen_indices[seed_type])
-        total_available = len(available_indices)
-        
-        if total_available < num_examples:
-            # Not enough unchosen samples remain
+
+        available = sorted(self.unchosen_indices[seed_type])
+        total = len(available)
+        if total < num_examples:
             return None
-    
-        # Divide available indices into roughly equal segments and choose one index per segment.
-        segment_size = total_available / num_examples
-        chosen_indices = []
+
+        segment = total / num_examples
+        chosen = []
         for i in range(num_examples):
-            start = int(round(i * segment_size))
-            end = int(round((i + 1) * segment_size))
-            # Ensure we have a non-empty segment
-            segment = available_indices[start:end] or [available_indices[start]]
-            chosen_index = random.choice(segment)
-            chosen_indices.append(chosen_index)
-    
-        # Remove the chosen indices from the unchosen tracker.
-        self.unchosen_indices[seed_type] = [
-            idx for idx in self.unchosen_indices[seed_type] if idx not in chosen_indices
-        ]
-    
-        # Build a list of {"instruction": ..., "json": ...} from the chosen samples.
-        chosen_entries = []
-        for idx in chosen_indices:
-            entry = self.seeds[seed_type][idx]
-            chosen_entries.append({
-                "instruction": entry["instruction"],
-                "json": entry["json"]
-            })
-        return {"examples": chosen_entries}
+            start = int(round(i * segment))
+            end = int(round((i + 1) * segment))
+            block = available[start:end] or [available[start]]
+            idx = random.choice(block)
+            chosen.append(idx)
+
+        self.unchosen_indices[seed_type] = [i for i in self.unchosen_indices[seed_type] if i not in chosen]
+
+        examples = []
+        for i in chosen:
+            entry = self.seeds[seed_type][i]
+            examples.append({"instruction": entry["instruction"], "json": entry["json"]})
+        return {"examples": examples}
 
     def reset(self, seed_type: Optional[str] = None):
         """
-        Reset the tracking of chosen samples. If a seed_type is provided, only that type is reset;
+        Reset the tracking of chosen samples. If seed_type is provided, only that type is reset;
         otherwise, all types are reset.
         """
         if seed_type:
@@ -141,3 +102,26 @@ class SamplePicker:
         else:
             for st in self.seeds:
                 self.unchosen_indices[st] = list(range(len(self.seeds[st])))
+
+    def append_new_pairs(self, seed_type: str, new_pairs: List[Dict[str, Any]]) -> None:
+        """
+        Append new instruction/JSON pairs to the seed database for the given type.
+        New entries are written to disk and marked as unchosen, while previously chosen remain marked.
+        """
+        if seed_type not in self.seeds:
+            raise ValueError(f"Unknown seed type: {seed_type}")
+
+        # Current length before appending
+        current_len = len(self.seeds[seed_type])
+        # Append in-memory
+        self.seeds[seed_type].extend(new_pairs)
+
+        # Write back to seed file
+        file_path = os.path.join(self.seed_folder, f"seed_{seed_type}.json")
+        os.makedirs(self.seed_folder, exist_ok=True)
+        with open(file_path, "w") as f:
+            json.dump(self.seeds[seed_type], f, indent=4)
+
+        # Mark new indices as unchosen
+        new_indices = list(range(current_len, current_len + len(new_pairs)))
+        self.unchosen_indices[seed_type].extend(new_indices)
