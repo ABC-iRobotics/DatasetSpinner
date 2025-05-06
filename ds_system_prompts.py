@@ -49,7 +49,7 @@ class SystemPromptRepository:
 
             Provide a diverse set of natural-language instructions detailing tasks
             that an outdoor mobile robot would logically perform, using the above structure and style. Include varied objects, times, and locations.
-            Ensure the instructions vary in length and structure, including multiple steps when needed.
+            Ensure the instructions vary in length and structure, including multiple steps when needed. Include all the information needed for the agent to convert it into a JSON fully representing tasks. Make sure all locations, objects or anything that we expect the agent to interact with is presented in the instruction.
         '''
     )
     
@@ -273,7 +273,7 @@ class SystemPromptRepository:
         **Else**, return exactly:
         ```json
         {
-          "result": "INVALID - Reason: <insert short reason here>"
+          "result": "INVALID - Reason: <insert short reason here, include the problematic part as well>"
         }
         ```
         '''
