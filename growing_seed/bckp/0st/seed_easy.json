@@ -1,0 +1,1708 @@
+[
+    {
+        "instruction": "Head to the assembly line to pick up the gearbox. Deliver it to the maintenance room, ensuring it is unloaded. Then, proceed to the control tower and stay there for 10 minutes before returning to the start position. Navigate to the loading dock to collect the shipment of screws. Transfer them to the storage area. Once unloaded, proceed to the central hub and remain idle for 25 minutes to monitor operations, then return to the storage area. Proceed to the inspection station to pick up the testing kit. Deliver it to the laboratory for analysis. After that, visit the storage room and wait for the toolbox to be ready. Carry it to the maintenance workshop, unload it, and remain there for 5 minutes before moving back to the start position.",
+        "json": {
+            "instuction": [
+                {
+                    "action": "go_to",
+                    "location": "assembly line",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "assembly line",
+                    "object": [
+                        {
+                            "description": "gearbox",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "maintenance room",
+                    "object": [
+                        {
+                            "description": "gearbox",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "control tower",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "control tower",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "start position",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "loading dock",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "loading dock",
+                    "object": [
+                        {
+                            "description": "shipment of screws",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "storage area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "storage area",
+                    "object": [
+                        {
+                            "description": "shipment of screws",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "central hub",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "central hub",
+                    "object": null,
+                    "duration": 1500
+                },
+                {
+                    "action": "go_to",
+                    "location": "storage area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "inspection station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "inspection station",
+                    "object": [
+                        {
+                            "description": "testing kit",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "laboratory",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "laboratory",
+                    "object": [
+                        {
+                            "description": "testing kit",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "storage room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage room",
+                    "object": [
+                        {
+                            "description": "toolbox",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance workshop",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "maintenance workshop",
+                    "object": [
+                        {
+                            "description": "toolbox",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "maintenance workshop",
+                    "object": null,
+                    "duration": 300
+                },
+                {
+                    "action": "go_to",
+                    "location": "start position",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to the charging station and wait for 15 minutes before proceeding to the dispatch area.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "charging station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "charging station",
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "go_to",
+                    "location": "dispatch area",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Move to the warehouse to pick up a crate of supplies, then deliver it to the assembly area.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "warehouse",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "warehouse",
+                    "object": [
+                        {
+                            "description": "crate of supplies",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "assembly area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "assembly area",
+                    "object": [
+                        {
+                            "description": "crate of supplies",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head to the docking station, pick up a batch of materials, and transport it to the production line.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "docking station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "docking station",
+                    "object": [
+                        {
+                            "description": "batch of materials",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "production line",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "production line",
+                    "object": [
+                        {
+                            "description": "batch of materials",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the maintenance bay for system diagnostics, stay there for 20 minutes, then return to the main hub.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "maintenance bay",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "maintenance bay",
+                    "object": null,
+                    "duration": 1200
+                },
+                {
+                    "action": "go_to",
+                    "location": "main hub",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Move to the greenhouse, pick up flower pots, and drop them at the garden entrance.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "greenhouse",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "greenhouse",
+                    "object": [
+                        {
+                            "description": "flower pots",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "garden entrance",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "garden entrance",
+                    "object": [
+                        {
+                            "description": "flower pots",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect boxes from the loading bay and deliver them to storage room 2.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "loading bay",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "loading bay",
+                    "object": [
+                        {
+                            "description": "boxes",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "storage room 2",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "storage room 2",
+                    "object": [
+                        {
+                            "description": "boxes",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Retrieve fertilizer bags from shed A and drop them off at the orchard gate.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "shed A",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "shed A",
+                    "object": [
+                        {
+                            "description": "fertilizer bags",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "orchard gate",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "orchard gate",
+                    "object": [
+                        {
+                            "description": "fertilizer bags",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Pick up harvested carrots from the vegetable patch and take them to the farmhouse.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "vegetable patch",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "vegetable patch",
+                    "object": [
+                        {
+                            "description": "harvested carrots",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "farmhouse",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "farmhouse",
+                    "object": [
+                        {
+                            "description": "harvested carrots",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Transport sandbags from the depot to floodgate 3.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "depot",
+                    "object": [
+                        {
+                            "description": "sandbags",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "floodgate 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "floodgate 3",
+                    "object": [
+                        {
+                            "description": "sandbags",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to the greenhouse to pick up the pallet of fertilizer bags. Deliver the pallet to the eastern field shed. Once unloaded, proceed to the equipment shelter and wait until the irrigation drone is placed onto the robot. Transport the drone to the launch pad, unload it, and remain at the launch pad for 15 minutes before returning to the greenhouse.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "greenhouse",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "greenhouse",
+                    "object": [
+                        {
+                            "description": "pallet of fertilizer bags",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "eastern field shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "eastern field shed",
+                    "object": [
+                        {
+                            "description": "pallet of fertilizer bags",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "equipment shelter",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "equipment shelter",
+                    "object": [
+                        {
+                            "description": "irrigation drone",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "launch pad",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "launch pad",
+                    "object": [
+                        {
+                            "description": "irrigation drone",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "launch pad",
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "go_to",
+                    "location": "greenhouse",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the irrigation shed, collect two containers of fertilizer, deliver them to the east vineyard, wait until a worker unloads the containers, then return to the maintenance bay.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "irrigation shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "irrigation shed",
+                    "object": [
+                        {
+                            "description": "container of fertilizer",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "east vineyard",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "east vineyard",
+                    "object": [
+                        {
+                            "description": "container of fertilizer",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance bay",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the central storage tent and pick up three sealed crates of beehive frames. Deliver the crates to the apiary workbench in the north orchard. After the frames have been unloaded by the crew, wait for 10 minutes for any urgent deliveries. Subsequently, travel to the maintenance garage and await further loading instructions.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "central storage tent",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "central storage tent",
+                    "object": [
+                        {
+                            "description": "sealed crate of beehive frames",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "apiary workbench in the north orchard",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "apiary workbench in the north orchard",
+                    "object": [
+                        {
+                            "description": "sealed crate of beehive frames",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "apiary workbench in the north orchard",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance garage",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to the fertilizer shed and pick up two bags of organic fertilizer. Transport the bags to greenhouse 4. Once you arrive, wait until all bags are removed by the horticulture team. Then travel to the field office and remain there for 15 minutes to assist staff with any quick requests. Finally, return to the main charging station.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "fertilizer shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "fertilizer shed",
+                    "object": [
+                        {
+                            "description": "bag of organic fertilizer",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "greenhouse 4",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "greenhouse 4",
+                    "object": [
+                        {
+                            "description": "bag of organic fertilizer",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "field office",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "field office",
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "go_to",
+                    "location": "main charging station",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the loading dock to pick up three crates of freshly harvested tomatoes, deliver the crates to the packaging facility, wait for 10 minutes while workers inspect the load, and afterward make your way to the fuel station for recharging.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "loading dock",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "loading dock",
+                    "object": [
+                        {
+                            "description": "crate of freshly harvested tomatoes",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "packaging facility",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "packaging facility",
+                    "object": [
+                        {
+                            "description": "crate of freshly harvested tomatoes",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "packaging facility",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "fuel station",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Drive to the maintenance shed, pick up two spare engine belts, deliver them to the grain silo, and wait until a technician retrieves the belts from the robot before returning to the maintenance shed.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "maintenance shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "maintenance shed",
+                    "object": [
+                        {
+                            "description": "spare engine belt",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "grain silo",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "grain silo",
+                    "object": [
+                        {
+                            "description": "spare engine belt",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance shed",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the orchard entrance and collect a stack of harvesting baskets. Transport the baskets to picking zone B. After all baskets are unloaded by the harvesting crew, wait for 10 minutes in the shade near the water station in case additional baskets are required. Once you receive confirmation that your assistance is no longer needed, make your way to the equipment garage for routine inspection.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "orchard entrance",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "orchard entrance",
+                    "object": [
+                        {
+                            "description": "stack of harvesting baskets",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "picking zone B",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "picking zone B",
+                    "object": [
+                        {
+                            "description": "stack of harvesting baskets",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "shade near the water station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "shade near the water station",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "equipment garage",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the orchard's north gate and pick up two bins of apples. Deliver the bins to the cold storage room. Wait until both bins are unloaded by staff. Next, proceed to the maintenance garage and wait for the replacement battery pack to be loaded onto the robot. Take the battery pack to the solar charging station, unload it, and then return to the orchard's north gate.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "orchard's north gate",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "orchard's north gate",
+                    "object": [
+                        {
+                            "description": "bin of apples",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "cold storage room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "cold storage room",
+                    "object": [
+                        {
+                            "description": "bin of apples",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance garage",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "maintenance garage",
+                    "object": [
+                        {
+                            "description": "replacement battery pack",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "solar charging station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "solar charging station",
+                    "object": [
+                        {
+                            "description": "replacement battery pack",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "orchard's north gate",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the maintenance shed and retrieve two spare fuel canisters. Convey the canisters to field generator station 3 near the south fence. Wait until all canisters have been transferred by the technician, and then proceed to the nearby tool depot to assist with relocating a pallet of gardening tools to the irrigation control room. After the delivery is complete, return to the charging area for battery replenishment.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "maintenance shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "maintenance shed",
+                    "object": [
+                        {
+                            "description": "spare fuel canisters",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "field generator station 3 near the south fence",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "field generator station 3 near the south fence",
+                    "object": [
+                        {
+                            "description": "spare fuel canisters",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "tool depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "tool depot",
+                    "object": [
+                        {
+                            "description": "pallet of gardening tools",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "irrigation control room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "irrigation control room",
+                    "object": [
+                        {
+                            "description": "pallet of gardening tools",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "charging area",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the seed sorting facility and collect three sacks of corn seeds. Transport the sacks to the planting field entrance and wait until all sacks are removed by the planting crew. After delivery, head to the irrigation pump station and stay for 20 minutes to monitor water levels. Then, return to the seed sorting facility to assist with additional tasks as needed.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "seed sorting facility",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "seed sorting facility",
+                    "object": [
+                        {
+                            "description": "sacks of corn seeds",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "planting field entrance",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "planting field entrance",
+                    "object": [
+                        {
+                            "description": "sacks of corn seeds",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "irrigation pump station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "irrigation pump station",
+                    "object": null,
+                    "duration": 1200
+                },
+                {
+                    "action": "go_to",
+                    "location": "seed sorting facility",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the vegetable packing zone and collect three crates of tomatoes. Deliver the crates to cold storage room 2 in the warehouse building. Once unloaded, wait for 10 minutes to assist with any additional incoming produce. Afterwards, return to the central loading bay to stand by for further instructions.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "vegetable packing zone",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "vegetable packing zone",
+                    "object": [
+                        {
+                            "description": "crates of tomatoes",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "cold storage room 2 in the warehouse building",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "cold storage room 2 in the warehouse building",
+                    "object": [
+                        {
+                            "description": "crates of tomatoes",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "cold storage room 2 in the warehouse building",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "central loading bay",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Begin by traveling to the orchard equipment shed to pick up a set of replacement pruning shears. Deliver the pruning shears to the north orchard section. Once unloaded, wait for 8 minutes to allow workers to test the equipment. Afterward, proceed to the compost area to retrieve a container of organic waste and transport it to the recycling center. Upon delivery, return to the central charging point and stand by for further instructions.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "orchard equipment shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "orchard equipment shed",
+                    "object": [
+                        {
+                            "description": "set of replacement pruning shears",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "north orchard section",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "north orchard section",
+                    "object": [
+                        {
+                            "description": "set of replacement pruning shears",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "north orchard section",
+                    "object": null,
+                    "duration": 480
+                },
+                {
+                    "action": "go_to",
+                    "location": "compost area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "compost area",
+                    "object": [
+                        {
+                            "description": "container of organic waste",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "recycling center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "recycling center",
+                    "object": [
+                        {
+                            "description": "container of organic waste",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "central charging point",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Navigate to the tool depot near the southwest field, pick up a canister of lubricating oil and a toolbox. Deliver both items to the windmill service area. Wait for the maintenance crew to unload the items, then proceed to the refueling station by the service gate and remain there for 15 minutes before heading back to the storage garage.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "tool depot near the southwest field",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "tool depot near the southwest field",
+                    "object": [
+                        {
+                            "description": "canister of lubricating oil",
+                            "num": 1
+                        },
+                        {
+                            "description": "toolbox",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "windmill service area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "windmill service area",
+                    "object": [
+                        {
+                            "description": "canister of lubricating oil",
+                            "num": 1
+                        },
+                        {
+                            "description": "toolbox",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "refueling station by the service gate",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "refueling station by the service gate",
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "go_to",
+                    "location": "storage garage",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head to the workshop storage area and pick up three sealed containers labeled 'Hazardous Waste.' Proceed carefully to the designated disposal site at the eastern perimeter. Upon arrival, wait until authorized personnel unload all containers. Once the payload is confirmed removed, drive to the equipment wash station and wait for 10 minutes for a thorough cleaning before returning to the workshop storage area.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "workshop storage area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "workshop storage area",
+                    "object": [
+                        {
+                            "description": "sealed container labeled 'Hazardous Waste'",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "designated disposal site at the eastern perimeter",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "designated disposal site at the eastern perimeter",
+                    "object": [
+                        {
+                            "description": "sealed container labeled 'Hazardous Waste'",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "equipment wash station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "equipment wash station",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "workshop storage area",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the orchard\u2019s northeast corner and gather all baskets filled with ripe pears. Carefully transport the baskets to the sorting shed beside the main barn. Once there, wait until the fruit sorting crew has emptied all baskets. As soon as the robot is empty, proceed to the solar charging station behind the equipment garage and recharge for 20 minutes before resuming any further tasks.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "orchard\u2019s northeast corner",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "orchard\u2019s northeast corner",
+                    "object": [
+                        {
+                            "description": "baskets filled with ripe pears",
+                            "num": "all"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "sorting shed beside the main barn",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "sorting shed beside the main barn",
+                    "object": [
+                        {
+                            "description": "baskets filled with ripe pears",
+                            "num": "all"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "solar charging station behind the equipment garage",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "solar charging station behind the equipment garage",
+                    "object": null,
+                    "duration": 1200
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Begin at the main storage silo and pick up two bags of fertilizer. Deliver the bags to the south field\u2019s supply point. Upon arrival, wait for the field assistant to unload both bags. Next, travel to the maintenance shed near the tractor parking area to collect a box of replacement spray nozzles. Take the box to the pesticide mixing station beside the west irrigation canal. Wait for 10 minutes while the technical team installs the nozzles, then proceed to the equipment garage for further instructions.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "main storage silo",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "main storage silo",
+                    "object": [
+                        {
+                            "description": "bags of fertilizer",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "south field\u2019s supply point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "south field\u2019s supply point",
+                    "object": [
+                        {
+                            "description": "bags of fertilizer",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance shed near the tractor parking area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "maintenance shed near the tractor parking area",
+                    "object": [
+                        {
+                            "description": "box of replacement spray nozzles",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "pesticide mixing station beside the west irrigation canal",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "pesticide mixing station beside the west irrigation canal",
+                    "object": [
+                        {
+                            "description": "box of replacement spray nozzles",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "pesticide mixing station beside the west irrigation canal",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "equipment garage",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the maintenance garage and pick up two spare hydraulic hoses. Deliver the hoses to the greenhouse repair site and wait until the technician has unloaded both hoses. After unloading, proceed to the solar charging station and remain there for 15 minutes to recharge batteries before returning to the maintenance garage.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "maintenance garage",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "maintenance garage",
+                    "object": [
+                        {
+                            "description": "spare hydraulic hoses",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "greenhouse repair site",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "greenhouse repair site",
+                    "object": [
+                        {
+                            "description": "spare hydraulic hoses",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "solar charging station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "solar charging station",
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance garage",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the composting site near the west fence and collect any full bio-waste bins. Deliver these bins to the recycling depot at the north entrance. After unloading, travel to the pesticide storage room, wait until a sealed canister is loaded onto the robot, and then promptly transfer the canister to the vine field utility station. Drop off the canister, wait for 8 minutes to confirm safe delivery, and finally return to the composting site for the next task.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "composting site near the west fence",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "composting site near the west fence",
+                    "object": [
+                        {
+                            "description": "full bio-waste bins",
+                            "num": "any"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "recycling depot at the north entrance",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "recycling depot at the north entrance",
+                    "object": [
+                        {
+                            "description": "full bio-waste bins",
+                            "num": "any"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "pesticide storage room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "pesticide storage room",
+                    "object": [
+                        {
+                            "description": "sealed canister",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "vine field utility station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "vine field utility station",
+                    "object": [
+                        {
+                            "description": "sealed canister",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "vine field utility station",
+                    "object": null,
+                    "duration": 480
+                },
+                {
+                    "action": "go_to",
+                    "location": "composting site near the west fence",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    }
+]

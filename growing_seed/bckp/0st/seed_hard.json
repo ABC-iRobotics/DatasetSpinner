@@ -1,0 +1,1561 @@
+[
+    {
+        "instruction": "Go to the supply depot and collect 10 power units. Distribute them evenly among charging station 1, charging station 2 and charging station 3. Once all power units are placed, return to the monitoring center.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "supply depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "supply depot",
+                    "object": [
+                        {
+                            "description": "power units",
+                            "num": "10"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "charging station 1",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "charging station 1",
+                    "object": [
+                        {
+                            "description": "power units",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "charging station 2",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "charging station 2",
+                    "object": [
+                        {
+                            "description": "power units",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "charging station 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "charging station 3",
+                    "object": [
+                        {
+                            "description": "power units",
+                            "num": "4"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "monitoring center",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the distribution hub to pick up 6 containers of medical supplies. Deliver two containers to each of three emergency stations (1-3) before returning to base.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "distribution hub",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "distribution hub",
+                    "object": [
+                        {
+                            "description": "containers of medical supplies",
+                            "num": "6"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "emergency station 1",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "emergency station 1",
+                    "object": [
+                        {
+                            "description": "containers of medical supplies",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "emergency station 2",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "emergency station 2",
+                    "object": [
+                        {
+                            "description": "containers of medical supplies",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "emergency station 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "emergency station 3",
+                    "object": [
+                        {
+                            "description": "containers of medical supplies",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "base",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect 12 battery modules from the storage unit and distribute them to four charging docks, North charging dock, East charging dock, South charging dock, West charding dock, ensuring each dock receives equal amounts. When ready, proceed to the maintenance bay.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "storage unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage unit",
+                    "object": [
+                        {
+                            "description": "battery modules",
+                            "num": "12"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "North charging dock",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "charging dock 1",
+                    "object": [
+                        {
+                            "description": "battery modules",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "East charging dock",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "charging dock 2",
+                    "object": [
+                        {
+                            "description": "battery modules",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "South charging dock",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "charging dock 3",
+                    "object": [
+                        {
+                            "description": "battery modules",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "West charging dock",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "charging dock 4",
+                    "object": [
+                        {
+                            "description": "battery modules",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance bay",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Retrieve 8 coolant canisters from the refrigeration unit. Deliver two canisters each to four industrial cooling towers (1-4). If any tower has reached capacity, redistribute the excess before proceeding to the central control room.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "refrigeration unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "refrigeration unit",
+                    "object": [
+                        {
+                            "description": "coolant canisters",
+                            "num": "8"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "cooling tower 1",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "cooling tower 1",
+                    "object": [
+                        {
+                            "description": "coolant canisters",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "cooling tower 2",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "cooling tower 2",
+                    "object": [
+                        {
+                            "description": "coolant canisters",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "cooling tower 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "cooling tower 3",
+                    "object": [
+                        {
+                            "description": "coolant canisters",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "cooling tower 4",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "cooling tower 4",
+                    "object": [
+                        {
+                            "description": "coolant canisters",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "central control room",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect 10 crates of vegetables from barn 4, evenly distribute them to market stalls Alpha, Beta, Gamma, and Delta, then report to the town square for further tasks.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "barn 4",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "barn 4",
+                    "object": [
+                        {
+                            "description": "crates of vegetables",
+                            "num": "10"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "market stall Alpha",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "market stall Alpha",
+                    "object": [
+                        {
+                            "description": "crates of vegetables",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "market stall Beta",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "market stall Beta",
+                    "object": [
+                        {
+                            "description": "crates of vegetables",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "market stall Gamma",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "market stall Gamma",
+                    "object": [
+                        {
+                            "description": "crates of vegetables",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "market stall Delta",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "market stall Delta",
+                    "object": [
+                        {
+                            "description": "crates of vegetables",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "town square",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect nine sealed soil-sample tubes from the geology outpost, then distribute two tubes to Station Alpha, three tubes to Station Beta, and four tubes to Station Gamma in that exact order. After the final hand-off at Station Gamma, wait half an hour for preliminary readings to finish before proceeding to the command tent.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "geology outpost",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "geology outpost",
+                    "object": [
+                        {
+                            "description": "sealed soil-sample tubes",
+                            "num": "9"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Station Alpha",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Station Alpha",
+                    "object": [
+                        {
+                            "description": "sealed soil-sample tubes",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Station Beta",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Station Beta",
+                    "object": [
+                        {
+                            "description": "sealed soil-sample tubes",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Station Gamma",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Station Gamma",
+                    "object": [
+                        {
+                            "description": "sealed soil-sample tubes",
+                            "num": "4"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 1800
+                },
+                {
+                    "action": "go_to",
+                    "location": "command tent",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Retrieve eight folding solar panels from the depot and bring four to Position A of the hilltop array. Wait exactly one hour for the technicians to secure them, then take the remaining four panels to Position B of the same array.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "depot",
+                    "object": [
+                        {
+                            "description": "folding solar panels",
+                            "num": "8"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "hilltop array Position A",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "hilltop array Position A",
+                    "object": [
+                        {
+                            "description": "folding solar panels",
+                            "num": "4"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 3600
+                },
+                {
+                    "action": "go_to",
+                    "location": "hilltop array Position B",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "hilltop array Position B",
+                    "object": [
+                        {
+                            "description": "folding solar panels",
+                            "num": "4"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Pick up nine emergency medical packs at the field hospital and deliver six packs to the north triage point followed by three packs to the east triage point. After unloading at the east point, wait ten minutes for confirmation, then report to the sanitation station.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "field hospital",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "field hospital",
+                    "object": [
+                        {
+                            "description": "emergency medical packs",
+                            "num": "9"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "north triage point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "north triage point",
+                    "object": [
+                        {
+                            "description": "emergency medical packs",
+                            "num": "6"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "east triage point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "east triage point",
+                    "object": [
+                        {
+                            "description": "emergency medical packs",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "sanitation station",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect ten water canisters from the desert well, drop five at Camp Alpha, two at Camp Gamma, and three at Camp Beta, visiting Gamma before Beta even though it receives fewer canisters. End the route at the observation tower.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "desert well",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "desert well",
+                    "object": [
+                        {
+                            "description": "water canisters",
+                            "num": "10"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Camp Alpha",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Camp Alpha",
+                    "object": [
+                        {
+                            "description": "water canisters",
+                            "num": "5"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Camp Gamma",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Camp Gamma",
+                    "object": [
+                        {
+                            "description": "water canisters",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Camp Beta",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Camp Beta",
+                    "object": [
+                        {
+                            "description": "water canisters",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "observation tower",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Bring one diagnostic toolkit from the equipment storage to the wind-turbine site, then wait exactly two hours for the maintenance crew to finish using it. Afterwards, collect the used oil filters from the same site and deliver them to the recycling center before heading to the rest area.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "equipment storage",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "equipment storage",
+                    "object": [
+                        {
+                            "description": "diagnostic toolkit",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "wind-turbine site",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "wind-turbine site",
+                    "object": [
+                        {
+                            "description": "diagnostic toolkit",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 7200
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "wind-turbine site",
+                    "object": [
+                        {
+                            "description": "used oil filters",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "recycling center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "recycling center",
+                    "object": [
+                        {
+                            "description": "used oil filters",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "rest area",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect one packet of heirloom tomato seeds from Seed Bank A, one of chili pepper seeds from Seed Bank B, and one of basil seeds from Seed Bank C, in that sequence. Deliver all three packets together to the greenhouse, wait for the horticulturist to accept them, then return to Seed Bank A for sanitization.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "Seed Bank A",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "Seed Bank A",
+                    "object": [
+                        {
+                            "description": "packet of heirloom tomato seeds",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Seed Bank B",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "Seed Bank B",
+                    "object": [
+                        {
+                            "description": "packet of chili pepper seeds",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Seed Bank C",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "Seed Bank C",
+                    "object": [
+                        {
+                            "description": "packet of basil seeds",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "greenhouse",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "greenhouse",
+                    "object": [
+                        {
+                            "description": "packet of heirloom tomato seeds",
+                            "num": "1"
+                        },
+                        {
+                            "description": "packet of chili pepper seeds",
+                            "num": "1"
+                        },
+                        {
+                            "description": "packet of basil seeds",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Seed Bank A",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Load twenty bolts, fifteen gears, and ten drive belts from the central warehouse. Deliver half of each type\u2014ten bolts, seven gears, five belts\u2014to the western workshop first, then the remaining quantities to the eastern workshop. After unloading at the eastern workshop, wait five minutes for inventory verification.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "central warehouse",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "central warehouse",
+                    "object": [
+                        {
+                            "description": "bolts",
+                            "num": "20"
+                        },
+                        {
+                            "description": "gears",
+                            "num": "15"
+                        },
+                        {
+                            "description": "drive belts",
+                            "num": "10"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "western workshop",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "western workshop",
+                    "object": [
+                        {
+                            "description": "bolts",
+                            "num": "10"
+                        },
+                        {
+                            "description": "gears",
+                            "num": "7"
+                        },
+                        {
+                            "description": "drive belts",
+                            "num": "5"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "eastern workshop",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "eastern workshop",
+                    "object": [
+                        {
+                            "description": "bolts",
+                            "num": "10"
+                        },
+                        {
+                            "description": "gears",
+                            "num": "8"
+                        },
+                        {
+                            "description": "drive belts",
+                            "num": "5"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 300
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Pick up three sealed barrels of antifreeze from the chemical shed and wait two minutes to verify the seals. Deliver the barrels to the cooling tower, wait for them to be unloaded, then collect any empty barrels at the tower and take those to the disposal site.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "chemical shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "chemical shed",
+                    "object": [
+                        {
+                            "description": "sealed barrels of antifreeze",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 120
+                },
+                {
+                    "action": "go_to",
+                    "location": "cooling tower",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "cooling tower",
+                    "object": [
+                        {
+                            "description": "sealed barrels of antifreeze",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "cooling tower",
+                    "object": [
+                        {
+                            "description": "empty barrels",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "disposal site",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "disposal site",
+                    "object": [
+                        {
+                            "description": "empty barrels",
+                            "num": "some"
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect six rescue drones from the drone hangar, deliver them to the charging bay, and wait until all batteries have been installed. Once the drones are fully powered, take them to the launch pad and then return to the hangar.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "drone hangar",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "drone hangar",
+                    "object": [
+                        {
+                            "description": "rescue drones",
+                            "num": "6"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "charging bay",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "charging bay",
+                    "object": [
+                        {
+                            "description": "rescue drones",
+                            "num": "6"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "charging bay",
+                    "object": [
+                        {
+                            "description": "fully powered rescue drones",
+                            "num": "6"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "launch pad",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "launch pad",
+                    "object": [
+                        {
+                            "description": "fully powered rescue drones",
+                            "num": "6"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "drone hangar",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Load twelve weather-sensor pods from the mobile IT van and deploy one pod each to twelve perimeter markers in clockwise order, starting at Marker North and ending at Marker North-West. After installing the final pod, wait fifteen minutes for system synchronization before moving to the data hub.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "mobile IT van",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "mobile IT van",
+                    "object": [
+                        {
+                            "description": "weather-sensor pods",
+                            "num": "12"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Marker North",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Marker North",
+                    "object": [
+                        {
+                            "description": "weather-sensor pod",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Marker North-East",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Marker North-East",
+                    "object": [
+                        {
+                            "description": "weather-sensor pod",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Marker East",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Marker East",
+                    "object": [
+                        {
+                            "description": "weather-sensor pod",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Marker South-East",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Marker South-East",
+                    "object": [
+                        {
+                            "description": "weather-sensor pod",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Marker South",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Marker South",
+                    "object": [
+                        {
+                            "description": "weather-sensor pod",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Marker South-West",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Marker South-West",
+                    "object": [
+                        {
+                            "description": "weather-sensor pod",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Marker West",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Marker West",
+                    "object": [
+                        {
+                            "description": "weather-sensor pod",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "Marker North-West",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "Marker North-West",
+                    "object": [
+                        {
+                            "description": "weather-sensor pod",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "go_to",
+                    "location": "data hub",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the greenhouse annex and retrieve four trays of seedling plants. Deliver two trays to the northern irrigation hub and place them on the designated rack. Bring the remaining two trays to the eastern planting plot. Once all trays have been delivered, wait for 10 minutes to confirm successful transfer, then return to the field operations tent.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "greenhouse annex",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "greenhouse annex",
+                    "object": [
+                        {
+                            "description": "trays of seedling plants",
+                            "num": "4"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "northern irrigation hub",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "northern irrigation hub",
+                    "object": [
+                        {
+                            "description": "trays of seedling plants",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "eastern planting plot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "eastern planting plot",
+                    "object": [
+                        {
+                            "description": "trays of seedling plants",
+                            "num": "2"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "field operations tent",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the equipment storage shed to collect three irrigation pumps. Deliver one pump to the south greenhouse, another to the central crop field's edge, and the third to the northern orchard outpost. After each delivery, wait until the pump has been fully unloaded before proceeding to the next location. Once all pumps are delivered, return to the storage shed for further instructions.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "equipment storage shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "equipment storage shed",
+                    "object": [
+                        {
+                            "description": "irrigation pump",
+                            "num": "3"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "south greenhouse",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "south greenhouse",
+                    "object": [
+                        {
+                            "description": "irrigation pump",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "central crop field's edge",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "central crop field's edge",
+                    "object": [
+                        {
+                            "description": "irrigation pump",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "northern orchard outpost",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "northern orchard outpost",
+                    "object": [
+                        {
+                            "description": "irrigation pump",
+                            "num": "1"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "equipment storage shed",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the solar panel field and collect a batch of twelve damaged solar cells. Take six cells to the maintenance tent for immediate repairs, leaving them there. Deliver the remaining six cells to the recycling bay next to the east gate. Once the cells are unloaded at the recycling bay, wait for 10 minutes in case any additional recyclable materials need to be loaded onto the robot before returning to the central garage.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "solar panel field",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "solar panel field",
+                    "object": [
+                        {
+                            "description": "damaged solar cells",
+                            "num": "12"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance tent",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "maintenance tent",
+                    "object": [
+                        {
+                            "description": "damaged solar cells",
+                            "num": "6"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "recycling bay next to the east gate",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "recycling bay next to the east gate",
+                    "object": [
+                        {
+                            "description": "damaged solar cells",
+                            "num": "6"
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": null,
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "central garage",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    }
+]
