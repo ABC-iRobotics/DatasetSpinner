@@ -10,9 +10,7 @@ class SupervisorResponse(BaseModel):
 
 class VM_Supervisor:
     def __init__(self, openai_api_key: str = None, model: str = "gpt-4.1"):
-        # Ensure the API key is set
-        if openai_api_key:
-            os.environ['OPENAI_API_KEY'] = openai_api_key
+        # Ensure the API key is set in the environment
         if os.getenv('OPENAI_API_KEY') is None:
             raise ValueError("An OpenAI API key must be set in the OPENAI_API_KEY environment variable.")
         self.client = openai.OpenAI()
@@ -23,10 +21,10 @@ class VM_Supervisor:
         instruction_json_pairs: List[Tuple[str, Any]],
         instruction_type: str,
         system_prompt: str = ""
-    ) -> Tuple[List[Tuple[str, Any]], str]:
+    ) -> Tuple[List[Tuple[str, Any]], List[Tuple[str, str]], str]:
         """
         Perform final, end-to-end validation of each Instruction/JSON pair.
-        If the pair is valid, keep it; otherwise discard it.
+        Returns both valid pairs and invalid pairs with reasons.
 
         Args:
             instruction_json_pairs: List of (instruction, json) tuples.
@@ -34,14 +32,18 @@ class VM_Supervisor:
             system_prompt: The supervisor system prompt.
 
         Returns:
-            A tuple of (valid_pairs, instruction_type).
+            A tuple of (valid_pairs, invalid_pairs_with_reason, instruction_type).
         """
         valid_pairs: List[Tuple[str, Any]] = []
+        invalid_pairs: List[Tuple[str, str]] = []
 
         for instruction, orig_json in instruction_json_pairs:
+            # Convert Pydantic model to dict if necessary
+            provided_json = orig_json if isinstance(orig_json, dict) else orig_json.dict()
+
             user_prompt = (
-                f"Instruction:\n{instruction}\n\n"
-                f"Provided JSON:\n{json.dumps(orig_json, indent=2)}\n"
+                f"Instruction:{instruction}"
+                f"Provided JSON:{json.dumps(provided_json, indent=2)}"
             )
 
             completion = self.client.beta.chat.completions.parse(
@@ -56,6 +58,7 @@ class VM_Supervisor:
             response_message = completion.choices[0].message
             # Skip if refusal
             if hasattr(response_message, "refusal") and response_message.refusal:
+                invalid_pairs.append((instruction, f"Refusal: {response_message.refusal}"))
                 continue
 
             try:
@@ -65,10 +68,14 @@ class VM_Supervisor:
                 try:
                     sup_response = SupervisorResponse.parse_raw(response_message.content)
                 except Exception:
+                    invalid_pairs.append((instruction, "Parsing error"))
                     continue
 
-            # Only keep pairs where result == "OK"
-            if sup_response.result.strip() == "OK":
-                valid_pairs.append((instruction, orig_json))
+            result = sup_response.result.strip()
+            # Keep or record invalid with reason
+            if result == "OK":
+                valid_pairs.append((instruction, provided_json))
+            else:
+                invalid_pairs.append((instruction, result))
 
-        return valid_pairs, instruction_type
+        return valid_pairs, invalid_pairs, instruction_type
