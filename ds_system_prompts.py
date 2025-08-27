@@ -3,6 +3,7 @@ class SystemPromptRepository:
     A repository class for system prompts.
     Currently holds the system prompt for generating mobile robot instructions.
     """
+    
     @classmethod
     def get_instruction_generation_prompt(cls) -> str:
         """
@@ -52,6 +53,43 @@ class SystemPromptRepository:
             Ensure the instructions vary in length and structure, including multiple steps when needed. Include all the information needed for the agent to convert it into a JSON fully representing tasks. Make sure all locations, objects or anything that we expect the agent to interact with is presented in the instruction.
         '''
     )
+
+    @classmethod
+    def get_hard_instruction_generation_prompt(cls) -> str:
+        """
+        Retrieve the system prompt for HARD type instruction generation.
+        
+        Returns:
+            str: The system prompt for HARD type instruction generation.
+        """
+        return cls.HARD_INSTRUCTION_GENERATION_PROMPT
+    
+    HARD_INSTRUCTION_GENERATION_PROMPT = (
+        '''
+            You are an expert mission-planner for autonomous ground robots.  
+            **Goal:** Write HARD-tier natural-language task instructions that will later be converted into a list of atomic actions  
+             • go_to(location) • wait_for_payload_ready(object)  
+             • wait_for_payload_removal(object) • wait_for_seconds(duration)
+            
+            Write each instruction as one cohesive paragraph (no lists, no code).  
+            Embed **non-trivial logic** so that at least one of the following appears:
+            
+            H-1 Distribution   Split or allocate a specific quantity across ≥ 3 destinations, handling remainders explicitly.  
+            H-2 Dependencies  Make later steps conditional on a prior pickup or drop-off being completed.  
+            H-3 Time-gating   Insert explicit waiting periods (in minutes or seconds) **between** critical steps.  
+            H-4 Iterative loops Describe repeating shuttle trips or batch transfers that must be unrolled step-by-step.
+            
+            Mandatory style & content rules
+            1. Mention **all** locations and payloads clearly so the JSON generator has every label it needs.  
+            2. Use realistic agriculture / manufacturing / storage scenarios (fields, silos, docks, maintenance bays, etc.).  
+            3. Combine at least three distinct verb clauses, linked with words such as “after”, “once”, “until”, “while”, “evenly”, “for each trip”, etc.  
+            4. Keep pronouns unambiguous—repeat the object name when needed.  
+            5. Do **not** reveal or mention the underlying atomic action names or any JSON.  
+            6. Vary sentence length, vocabulary, and numerical quantities across examples.
+
+            Generate one HARD instruction per response.
+        '''
+    )
     
     @classmethod
     def get_json_generation_prompt(cls) -> str:
@@ -98,8 +136,8 @@ class SystemPromptRepository:
             For each location, use the most accurate name given in the instruction.
             For each payload/object, create a JSON object with:
             "description": A concise name for the item.
-            "num": The quantity (“some” if unspecified).
-            Example: { "action": "wait_for_payload_ready", "location": "seed storage unit", "object": [ { "description": "bags of wheat seeds", "num": "5" }, { "description": "vegetables", "num": "some" } ], "duration": null }
+            "num": The quantity (-1 if unspecified).
+            Example: { "action": "wait_for_payload_ready", "location": "seed storage unit", "object": [ { "description": "bags of wheat seeds", "num": 5 }, { "description": "vegetables", "num": -1 } ], "duration": null }
         '''
     )
 
