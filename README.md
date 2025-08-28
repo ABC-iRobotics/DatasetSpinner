@@ -1,6 +1,6 @@
 # DatasetSpinner
 
-**DataSpinner** is a modular, agent-based synthetic dataset generation pipeline, consisting of two main modules:  
+**DatasetSpinner** is a modular, agent-based synthetic dataset generation pipeline, consisting of two main modules:  
 - **GenerationModule (GM)**  
 - **ValidatorModule (VM)**  
 
