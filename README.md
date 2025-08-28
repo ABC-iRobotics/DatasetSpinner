@@ -65,7 +65,7 @@ File: [`vm_supervisor.py`](./vm_supervisor.py)
 
 The dataset consists of **Instruction/JSON pairs**.
 
-### Example
+### Example (Hard)
 
 ```json
 {
