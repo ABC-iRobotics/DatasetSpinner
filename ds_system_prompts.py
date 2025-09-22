@@ -366,6 +366,7 @@ class SystemPromptRepository:
         
         3. Containers / aggregates / partitives (“X of Y”)
         * Treat X as the unit when X ∈ {bag, box, crate, pallet, roll, spool, reel, stack, pile, bundle, bunch, case, packet, pack, jar, bottle, can, tube, sheet, set, kit, pair, trio, dozen, half-dozen}.
+        * Treat X as the unit when X ∈ {array, batch, fleet, herd, cluster, swarm, ollective nouns}.
         * “N X of Y” → description “X of Y”, num N.
         * “a/one X of Y” → num 1.
         * Fixed-number words: pair=2, couple=2, trio=3, dozen=12, half-dozen=6
@@ -387,7 +388,7 @@ class SystemPromptRepository:
         * “no/zero X” → num 0.
         
         DESCRIPTION NORMALIZATION
-        * Keep descriptions short, machine-stable, faithful to what’s manipulated.
+        * Keep descriptions faithful to what’s being mentioned in the instruction.
         * If a container/aggregate exists, keep the full container phrase (e.g., “crate of harvested apples”, “stack of metal rods”, “bag of sweet chili”).
         * Otherwise, use singular lemma of the base noun and keep informative adjectives (e.g., “metal rod”, “blue ball”, “fresh apple”).
         * Strip determiners (“a/the/this/that/any”) from description.
@@ -398,7 +399,7 @@ class SystemPromptRepository:
           • minutes × 60, hours × 3600.
           • “a couple of minutes” → 120; “a minute and a half” → 90; “quarter of an hour” → 900.
           • Mixed forms (“5 min 30 s”) → sum to seconds (330).
-        * If time is not mentioned regarding the waiting action or can't be inferenced, use undefined waiting time → -1.
+        * If time is not mentioned regarding the waiting action or can't be inferenced, use undefined waiting time → -1
         
         LANGUAGE → ACTION MAPPING (NON-EXHAUSTIVE)
         * go_to: <phrase that implies movement with a location as argument> 
