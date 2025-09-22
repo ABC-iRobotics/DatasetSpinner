@@ -1,0 +1,4059 @@
+[
+    {
+        "instruction": "Go to the grain silo and wait to load wheat. Next, transport it to the processing plant for unloading. After unloading, navigate to the irrigation control point, check if assistance is needed, then head back to the headquarters.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "grain silo",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "grain silo",
+                    "object": [
+                        {
+                            "description": "wheat",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "processing plant",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "processing plant",
+                    "object": [
+                        {
+                            "description": "wheat",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "irrigation control point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "headquarters",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the command center and collect the navigation module. Deliver it to the communications tower, ensuring the security clearance is obtained. Afterwards, stop by the cafeteria and wait for a payload of packed meals before heading to the rest area.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "command center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "command center",
+                    "object": [
+                        {
+                            "description": "navigation module",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "communications tower",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "communications tower",
+                    "object": [
+                        {
+                            "description": "navigation module",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "cafeteria",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "cafeteria",
+                    "object": [
+                        {
+                            "description": "payload of packed meals",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "rest area",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Visit the wind turbine for a new calibration tool. Deliver it to the energy station without delay. Then, move to the monitoring room and stay there for 1 hour, after which return directly to the wind turbine for further instructions.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "wind turbine",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "wind turbine",
+                    "object": [
+                        {
+                            "description": "calibration tool",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "energy station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "energy station",
+                    "object": [
+                        {
+                            "description": "calibration tool",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "monitoring room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "monitoring room",
+                    "object": null,
+                    "duration": 3600
+                },
+                {
+                    "action": "go_to",
+                    "location": "wind turbine",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Transport the fertilizer from storage area A to field 2, wait for its complete removal, then go to field 3 and stay there for 7 minutes to observe the irrigation system. Conclude at the main barn for final evaluation.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "storage area A",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage area A",
+                    "object": [
+                        {
+                            "description": "fertilizer",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "field 2",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "field 2",
+                    "object": [
+                        {
+                            "description": "fertilizer",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "field 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "field 3",
+                    "object": null,
+                    "duration": 420
+                },
+                {
+                    "action": "go_to",
+                    "location": "main barn",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Move to the assembly zone to collect the electric motors. Transfer these to the shipping department. Wait till the cargo is removed. Subsequently, head to the fuel depot and refuel before returning to the dock.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "assembly zone",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "assembly zone",
+                    "object": [
+                        {
+                            "description": "electric motor",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "shipping department",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "shipping department",
+                    "object": [
+                        {
+                            "description": "electric motor",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "fuel depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "dock",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head over to the solar panel field to pick up the maintenance kit and deliver it to the repair station. Await confirmation of delivery before proceeding to the greenhouse. In the greenhouse, wait for 10 minutes for moisture level checks, then finish at the visitor center.",
+        "json": { "instruction": [ { "action": "go_to", "location": "solar panel field", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "solar panel field", "object": [ { "description": "maintenance kit", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "repair station", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "repair station", "object": [ { "description": "maintenance kit", "num": 1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "repair station", "object": null, "duration": -1 }, { "action": "go_to", "location": "greenhouse", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "greenhouse", "object": null, "duration": 600 }, { "action": "go_to", "location": "visitor center", "object": null, "duration": null } ] }
+    },
+    {
+        "instruction": "Collect the chemical samples from the lab and take them to the analysis room. Wait until the samples are removed before heading to the logistics center. At the center, you will need to wait for a delivery of office supplies to load before returning to the lab.",
+        "json": { "instruction": [ { "action": "go_to", "location": "lab", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "lab", "object": [ { "description": "chemical sample", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "analysis room", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "analysis room", "object": [ { "description": "chemical sample", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "logistics center", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "logistics center", "object": [ { "description": "office supply", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "lab", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "lab", "object": [ { "description": "office supply", "num": -1 } ], "duration": null } ] }
+    },
+    {
+        "instruction": "Go to the east solar station for a panel replacement unit. Deliver it to the west maintenance area and wait until it is fully unloaded. Next, proceed to the control room and stay for a duration of 20 minutes. Finally, head back to the starting point.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "east solar station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "east solar station",
+                    "object": [
+                        {
+                            "description": "panel replacement unit",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "west maintenance area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "west maintenance area",
+                    "object": [
+                        {
+                            "description": "panel replacement unit",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "control room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "control room",
+                    "object": null,
+                    "duration": 1200
+                },
+                {
+                    "action": "go_to",
+                    "location": "starting point",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Pick up the security badges from the admin building and take them to the security office. Ensure the removal is confirmed before going to the vehicle depot. Wait there for 180 seconds for updates on the fleet.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "admin building",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "admin building",
+                    "object": [
+                        {
+                            "description": "security badge",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "security office",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "security office",
+                    "object": [
+                        {
+                            "description": "security badge",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "vehicle depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "vehicle depot",
+                    "object": null,
+                    "duration": 180
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the engine workshop to fetch the starter motors. Transport them to the repair yard for inspection. Lastly, arrive at the admin cabin and power down for 30 minutes to comply with scheduled maintenance.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "engine workshop",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "engine workshop",
+                    "object": [
+                        {
+                            "description": "starter motor",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "repair yard",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "repair yard",
+                    "object": [
+                        {
+                            "description": "starter motor",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "admin cabin",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "admin cabin",
+                    "object": null,
+                    "duration": 1800
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to the data server room to pick up backup drives. Take them to the IT department at sector 9 for restoration. After unloading, go to the medical wing and wait for up to 25 minutes to assist in internal network check-ups.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "data server room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "data server room",
+                    "object": [
+                        {
+                            "description": "backup drive",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "IT department at sector 9",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "IT department at sector 9",
+                    "object": [
+                        {
+                            "description": "backup drive",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "medical wing",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "medical wing",
+                    "object": null,
+                    "duration": 1500
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Secure the documents from the filing unit and deliver them to archival storage unit 5. Ensure all documents are logged in properly before shifting to parking zone C to idle there for 20 minutes for system updates.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "filing unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "filing unit",
+                    "object": [
+                        {
+                            "description": "document",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "archival storage unit 5",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "archival storage unit 5",
+                    "object": [
+                        {
+                            "description": "document",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "parking zone C",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "parking zone C",
+                    "object": null,
+                    "duration": 1200
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Move to the wind station to collect the repair parts, then take these parts to the mechanical laboratory. After the parts have been unloaded, proceed directly to the bio farm and wait there for fertilizer inventory evaluations.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "wind station",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "duration": null,
+                    "location": "wind station",
+                    "object": [
+                        {
+                            "description": "repair part",
+                            "num": -1
+                        }
+                    ]
+                },
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "mechanical laboratory",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "duration": null,
+                    "location": "mechanical laboratory",
+                    "object": [
+                        {
+                            "description": "repair part",
+                            "num": -1
+                        }
+                    ]
+                },
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "bio farm",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "duration": -1,
+                    "location": "bio farm",
+                    "object": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the network tunnel access point, pick up the network cables for the server room delivery. Once delivered, continue to the conference atrium and standby for instructions for 20 minutes, after which return to operational area.",
+        "json": { "instruction": [ { "action": "go_to", "location": "network tunnel access point", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "network tunnel access point", "object": [ { "description": "network cable", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "server room", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "server room", "object": [ { "description": "network cable", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "conference atrium", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "conference atrium", "object": null, "duration": 1200 }, { "action": "go_to", "location": "operational area", "object": null, "duration": null } ] }
+    },
+    {
+        "instruction": "Head over to the packaging sector to gather sensor units, swiftly make way to operations hub for drop-off. Pause by command center for 10 minutes for reassessment before wrapping at main bay.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "packaging sector",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "packaging sector",
+                    "object": [
+                        {
+                            "description": "sensor unit",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "operations hub",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "operations hub",
+                    "object": [
+                        {
+                            "description": "sensor unit",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "command center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "command center",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "main bay",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Acquire toolkit from dock area, ensure transportation to storeroom B promptly. Then, pause by the signal room for a short 5 minutes wait ahead of reconvening at utility bay.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "dock area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "dock area",
+                    "object": [
+                        {
+                            "description": "toolkit",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "storeroom B",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "storeroom B",
+                    "object": [
+                        {
+                            "description": "toolkit",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "signal room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "signal room",
+                    "object": null,
+                    "duration": 300
+                },
+                {
+                    "action": "go_to",
+                    "location": "utility bay",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "From inventory hangar, obtain the floor buffer for custodial section delivery. Following the logout confirmation, proceed to innovation zone, stand still for personnel feedback taking 600 seconds, close on procedure at check-in station.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "inventory hangar",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "inventory hangar",
+                    "object": [
+                        {
+                            "description": "floor buffer",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "custodial section",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "custodial section",
+                    "object": [
+                        {
+                            "description": "floor buffer",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "innovation zone",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "innovation zone",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "check-in station",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Visit the green storage location for thermoregulators, take them to bioengineering cluster. Immediately after unloading, shift to dispatch center and await there for 8 minutes for dispatch confirmations. Finally, return to the loading center for next phase.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "green storage location",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "green storage location",
+                    "object": [
+                        {
+                            "description": "thermoregulator",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "bioengineering cluster",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "bioengineering cluster",
+                    "object": [
+                        {
+                            "description": "thermoregulator",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "dispatch center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "dispatch center",
+                    "object": null,
+                    "duration": 480
+                },
+                {
+                    "action": "go_to",
+                    "location": "loading center",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Navigate to the main hanger and retrieve emergency tools, move them to area 13 swiftly. Following this, approach energy grid west side to assist in grid calibration that requires a 20 minutes hold.",
+        "json": { "instruction": [ { "action": "go_to", "location": "main hanger", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "main hanger", "object": [ { "description": "emergency tool", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "area 13", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "area 13", "object": [ { "description": "emergency tool", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "energy grid west side", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "energy grid west side", "object": null, "duration": 1200 } ] }
+    },
+    {
+        "instruction": "To the cooling unit for buckets of lubricants, hurriedly take them to machinery plant 9 for redistribution, then stay at logistics pad for 7 minutes to oversee shipment schedulements.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "cooling unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "cooling unit",
+                    "object": [
+                        {
+                            "description": "bucket of lubricants",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "machinery plant 9",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "machinery plant 9",
+                    "object": [
+                        {
+                            "description": "bucket of lubricants",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "logistics pad",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "logistics pad",
+                    "object": null,
+                    "duration": 420
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to yard sector, retrieve fuel nozzles for nearby charging station. Post unloading, hover at library node and attentively check system implementments for upcoming strategies over 15 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "yard sector",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "yard sector",
+                    "object": [
+                        {
+                            "description": "fuel nozzle",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "nearby charging station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "nearby charging station",
+                    "object": [
+                        {
+                            "description": "fuel nozzle",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "library node",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "library node",
+                    "object": null,
+                    "duration": 900
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Shift to repair dock H for binding solutions, transport to construction site G. Post-unloading, remain at logistics ground for 10 minutes to mediate dispatch solutions to shipping crew.",
+        "json": { "instruction": [ { "action": "go_to", "location": "repair dock H", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "repair dock H", "object": [ { "description": "binding solution", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "construction site G", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "construction site G", "object": [ { "description": "binding solution", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "logistics ground", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "logistics ground", "object": null, "duration": 600 } ] }
+    },
+    {
+        "instruction": "Ascend to control tower line for emergency survival packs swiftly relocate to auxiliary station 14. Reconfigure system for emergency support, hold visibly at back entrance for 9 minutes general oversight.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "control tower line",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "control tower line",
+                    "object": [
+                        {
+                            "description": "emergency survival pack",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "auxiliary station 14",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "auxiliary station 14",
+                    "object": [
+                        {
+                            "description": "emergency survival pack",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "back entrance",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "back entrance",
+                    "object": null,
+                    "duration": 540
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Carry solar power units from charging bay A, place them at transformation bay strategically. To face additional configuration hurdles, civil center is marked along previous path 20 minutes passage waiting.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "charging bay A",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "charging bay A",
+                    "object": [
+                        {
+                            "description": "solar power unit",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "transformation bay",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "transformation bay",
+                    "object": [
+                        {
+                            "description": "solar power unit",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "civil center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "civil center",
+                    "object": null,
+                    "duration": 1200
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Secure weather station elements from report booth 9, escort to engineer’s nexus chamber. Following protocol confirmed, linger at reception pod, extend dynamically 5 further minutes for superior proximity duties.",
+        "json": { "instruction": [ { "action": "go_to", "location": "report booth 9", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "report booth 9", "object": [ { "description": "weather station element", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "engineer’s nexus chamber", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "engineer’s nexus chamber", "object": [ { "description": "weather station element", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "reception pod", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "reception pod", "object": null, "duration": 300 } ] }
+    },
+    {
+        "instruction": "Mission entails securing steel-based gears from procurement storage E, loading them to factory assembly hall. Sequentially allot minutes duration at safety booth pending forthcoming security clearances 15-minute interval staged.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "procurement storage E",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "procurement storage E",
+                    "object": [
+                        {
+                            "description": "steel-based gear",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "factory assembly hall",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "factory assembly hall",
+                    "object": [
+                        {
+                            "description": "steel-based gear",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "safety booth",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "safety booth",
+                    "object": null,
+                    "duration": 900
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Arrive at assembly zone mezzanine, commandeer package onboard cooperation with instrument coating zone W. However, remain negotiably for 9 minutes by air handling chamber pending safer storage improvements.",
+        "json": { "instruction": [ { "action": "go_to", "location": "assembly zone mezzanine", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "assembly zone mezzanine", "object": [ { "description": "package", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "instrument coating zone W", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "instrument coating zone W", "object": [ { "description": "package", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "air handling chamber", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "air handling chamber", "object": null, "duration": 540 } ] }
+    },
+    {
+        "instruction": "Handle three deliveries in order of priority. First, collect the fragile sample from supply closet A, pass by the security checkpoint for a brief hold, and deliver it to the lab 3 – cold room. Next, take the heavy part from the maintenance cage, pause at the weight scale for verification, and deliver it to the loading dock. Finally, return to supply closet A for the document pouch and drop it at the administration office – mail slot. End the route at the charging station and wait briefly. Confirm each pickup and drop.",
+        "json": { "instruction": [ { "action": "go_to", "location": "supply closet A", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "supply closet A", "object": [ { "description": "fragile sample", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "security checkpoint", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "security checkpoint", "object": null, "duration": -1 }, { "action": "go_to", "location": "lab 3 – cold room", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "lab 3 – cold room", "object": [ { "description": "fragile sample", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "maintenance cage", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "maintenance cage", "object": [ { "description": "heavy part", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "weight scale", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "weight scale", "object": null, "duration": -1 }, { "action": "go_to", "location": "loading dock", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "loading dock", "object": [ { "description": "heavy part", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "supply closet A", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "supply closet A", "object": [ { "description": "document pouch", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "administration office – mail slot", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "administration office – mail slot", "object": [ { "description": "document pouch", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "charging station", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "charging station", "object": null, "duration": -1 } ] }
+    },
+    {
+        "instruction": "Visit the storage room to load the fertilizer bags, then transfer them to the field and unload them. Make sure to wait for 15 minutes on the field before you leave.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "storage room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage room",
+                    "object": [
+                        {
+                            "description": "fertilizer bag",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "field",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "field",
+                    "object": [
+                        {
+                            "description": "fertilizer bag",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "field",
+                    "object": null,
+                    "duration": 900
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Visit the loading area to collect boxes of machine parts. These should be taken to the assembly line. Following the delivery, proceed to the cafeteria and wait for the mechanic team for 25 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "loading area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "loading area",
+                    "object": [
+                        {
+                            "description": "box of machine parts",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "assembly line",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "assembly line",
+                    "object": [
+                        {
+                            "description": "box of machine parts",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "cafeteria",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "cafeteria",
+                    "object": null,
+                    "duration": 1500
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to the farm entrance and load the wheat sacks. Deliver some of them to the milling station and wait for removal. Then move ahead, take the rest to the feed storage and ensure they're unloaded before returning to the mill.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "farm entrance",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "farm entrance",
+                    "object": [
+                        {
+                            "description": "wheat sack",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "milling station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "milling station",
+                    "object": [
+                        {
+                            "description": "wheat sack",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "feed storage",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "feed storage",
+                    "object": [
+                        {
+                            "description": "wheat sack",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "mill",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head over to the service dock to get 3 arrays of sensors. Transport these to the data hub and stay there for exactly 12 minutes after unloading for calibration checks.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "service dock",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "service dock",
+                    "object": [
+                        {
+                            "description": "array of sensors",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "data hub",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "data hub",
+                    "object": [
+                        {
+                            "description": "array of sensors",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "data hub",
+                    "object": null,
+                    "duration": 720
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to the boiler room to pick up the toolkit. Deliver it to the monitoring station, wait for it to be removed and then stand by there for 30 minutes for any emergency repairs.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "boiler room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "boiler room",
+                    "object": [
+                        {
+                            "description": "toolkit",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "monitoring station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "monitoring station",
+                    "object": [
+                        {
+                            "description": "toolkit",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "monitoring station",
+                    "object": null,
+                    "duration": 1800
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Navigate to the parts division to gather 2 boxes of screws and head over to the assembly unit. Once the screws are removed, proceed to the break room and wait there for 35 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "parts division",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "parts division",
+                    "object": [
+                        {
+                            "description": "box of screws",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "assembly unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "assembly unit",
+                    "object": [
+                        {
+                            "description": "box of screws",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "break room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "break room",
+                    "object": null,
+                    "duration": 2100
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Begin at the main entrance to collect delivery papers, and bring them to the admin office. Wait there for confirmation before proceeding to the visitor center and staying for 20 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "main entrance",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "main entrance",
+                    "object": [
+                        {
+                            "description": "delivery paper",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "admin office",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "admin office",
+                    "object": [
+                        {
+                            "description": "delivery paper",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "admin office",
+                    "object": null,
+                    "duration": -1
+                },
+                {
+                    "action": "go_to",
+                    "location": "visitor center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "visitor center",
+                    "object": null,
+                    "duration": 1200
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Retrieve the water bottles from collection point alpha. They need to be brought to meeting room B for distribution. Post-distribution, visit the observation deck and wait for 20 minutes to assist with data synchronization.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "collection point alpha",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "collection point alpha",
+                    "object": [
+                        {
+                            "description": "water bottle",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "meeting room B",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "meeting room B",
+                    "object": [
+                        {
+                            "description": "water bottle",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "observation deck",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "observation deck",
+                    "object": null,
+                    "duration": 1200
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Navigate to the electronics bay and take the circuit boards. Bring them to the research lab for testing. After testing, proceed to the main entrance and stay 600 seconds for any re-routing.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "electronics bay",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "electronics bay",
+                    "object": [
+                        {
+                            "description": "circuit board",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "research lab",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "research lab",
+                    "object": [
+                        {
+                            "description": "circuit board",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "main entrance",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "main entrance",
+                    "object": null,
+                    "duration": 600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head to loading dock Z for a fleet of robotic arms now, shift to engine control room. Gathering oil cans there for chemical lab D. Near headquarter zone, wait twenty minutes to handle preventative measures.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "loading dock Z",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "duration": null,
+                    "location": "loading dock Z",
+                    "object": [
+                        {
+                            "description": "fleet of robotic arms",
+                            "num": 1
+                        }
+                    ]
+                },
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "engine control room",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "duration": null,
+                    "location": "engine control room",
+                    "object": [
+                        {
+                            "description": "oil can",
+                            "num": -1
+                        }
+                    ]
+                },
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "chemical lab D",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "duration": null,
+                    "location": "chemical lab D",
+                    "object": [
+                        {
+                            "description": "oil can",
+                            "num": -1
+                        }
+                    ]
+                },
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "headquarter zone",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "duration": 1200,
+                    "location": "headquarter zone",
+                    "object": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Begin by obtaining chemical reagents from chemistry room, proceed to biology station for transfer assistance, drop off the package there. Finally, reach the networks lab and stand by for 10 minutes for software patch updates.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "chemistry room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "chemistry room",
+                    "object": [
+                        {
+                            "description": "chemical reagent",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "biology station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "networks lab",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "networks lab",
+                    "object": null,
+                    "duration": 600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Transport the orientation manuals from admin hub to recruitment center without delay. After completion, stop by refresher unit, await team instructions over the course of 360 seconds, then exit to navigation suite.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "admin hub",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "admin hub",
+                    "object": [
+                        {
+                            "description": "orientation manual",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "recruitment center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "recruitment center",
+                    "object": [
+                        {
+                            "description": "orientation manual",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "refresher unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "refresher unit",
+                    "object": null,
+                    "duration": 360
+                },
+                {
+                    "action": "go_to",
+                    "location": "navigation suite",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Acquire the reflective panels from solar housing, directly move to auxiliary base for swift unloading. Ventures to logistics outpost where you must remain for 5 minutes for operational directives.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "solar housing",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "solar housing",
+                    "object": [
+                        {
+                            "description": "reflective panel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "auxiliary base",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "auxiliary base",
+                    "object": [
+                        {
+                            "description": "reflective panel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "logistics outpost",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "logistics outpost",
+                    "object": null,
+                    "duration": 300
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Fetch spare antennas from depot bay C, deliver them to tower station. After the removal, navigate to the monitoring deck, verify data trends for 5 for minutes, then dispatch to tower station.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "depot bay C",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "depot bay C",
+                    "object": [
+                        {
+                            "description": "spare antenna",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "tower station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "tower station",
+                    "object": [
+                        {
+                            "description": "spare antenna",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "monitoring deck",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "monitoring deck",
+                    "object": null,
+                    "duration": 300
+                },
+                {
+                    "action": "go_to",
+                    "location": "tower station",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Scout for secured plates at materials loading bay, transfer to assembly sector. Prior to exit, navigate heat treatment room pending 5 minutes of temperature assessment, next, head back to assembly sector.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "materials loading bay",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "materials loading bay",
+                    "object": [
+                        {
+                            "description": "secured plate",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "assembly sector",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "assembly sector",
+                    "object": [
+                        {
+                            "description": "secured plate",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "heat treatment room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "heat treatment room",
+                    "object": null,
+                    "duration": 300
+                },
+                {
+                    "action": "go_to",
+                    "location": "assembly sector",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Shift to documentation base, grab external logs for the entryway. After afterward steps, relax in employee suite 10 minutes awaiting personal necessities being delivered, then revert to designated parking area post-operation.",
+        "json": { "instruction": [ { "action": "go_to", "location": "documentation base", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "documentation base", "object": [ { "description": "external log", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "entryway", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "entryway", "object": [ { "description": "external log", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "employee suite", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "employee suite", "object": null, "duration": 600 }, { "action": "go_to", "location": "designated parking area", "object": null, "duration": null } ] }
+    },
+    {
+        "instruction": "Proceed to the grain silo to collect samples. Bring these to the analysis center and ensure their removal. Conclude by waiting at the central yard for 5 minutes and then return to the grain silo.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "grain silo",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "grain silo",
+                    "object": [
+                        {
+                            "description": "sample",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "analysis center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "analysis center",
+                    "object": [
+                        {
+                            "description": "sample",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "central yard",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "central yard",
+                    "object": null,
+                    "duration": 300
+                },
+                {
+                    "action": "go_to",
+                    "location": "grain silo",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Make your way to the tank storage to acquire the cleaning solution barrels. Once loaded, travel to the sanitation area and await unload confirmation. Thereafter, reach the visitor's lodge for instructions on tourism logistics support, which might take 10 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "tank storage",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "tank storage",
+                    "object": [
+                        {
+                            "description": "cleaning solution barrel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "sanitation area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "sanitation area",
+                    "object": [
+                        {
+                            "description": "cleaning solution barrel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "visitor's lodge",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "visitor's lodge",
+                    "object": null,
+                    "duration": 600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Pick up maintenance guidelines from the documentation center, transfer them to the technical team room. Post-delivery, visit the control booth and wait 10 minutes for operational run throughs, finally proceed to power grid office.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "documentation center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "documentation center",
+                    "object": [
+                        {
+                            "description": "maintenance guideline",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "technical team room",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "technical team room",
+                    "object": [
+                        {
+                            "description": "maintenance guideline",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "control booth",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "control booth",
+                    "object": null,
+                    "duration": 600
+                },
+                {
+                    "action": "go_to",
+                    "location": "power grid office",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "From charging bay 1, acquire the new battery supply and transport it to the power junction for insertion procedures. Await feedback before heading to the strategy office for check-ins that last for 30 minutes.",
+        "json": { "instruction": [ { "action": "go_to", "location": "charging bay 1", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "charging bay 1", "object": [ { "description": "new battery", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "power junction", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "power junction", "object": [ { "description": "new battery", "num": -1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "power junction", "object": null, "duration": -1 }, { "action": "go_to", "location": "strategy office", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "strategy office", "object": null, "duration": 1800 } ] }
+    },
+    {
+        "instruction": "Get the safety gloves from the supply division, quickly bring them to the chemical handling unit. Stay for official debriefing ten minutes, end journey at welcome desk.",
+        "json": { "instruction": [ { "action": "go_to", "location": "supply division", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "supply division", "object": [ { "description": "safety glove", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "chemical handling unit", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "chemical handling unit", "object": [ { "description": "safety glove", "num": -1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "chemical handling unit", "object": null, "duration": 600 }, { "action": "go_to", "location": "welcome desk", "object": null, "duration": null } ] }
+    },
+    {
+        "instruction": "Travel to refueling bay 7 to secure fuel cells, promptly relocate them to fueling station 5. Upon removal, turn to the technical workshop to await upcoming assessments, roughly 15 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "refueling bay 7",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "refueling bay 7",
+                    "object": [
+                        {
+                            "description": "fuel cell",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "fueling station 5",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "fueling station 5",
+                    "object": [
+                        {
+                            "description": "fuel cell",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "technical workshop",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "technical workshop",
+                    "object": null,
+                    "duration": 900
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Acquire repair station 2 component modules, deploy towards maintenance corridor for special handling. Directly endure in resting area during 10 minutes recuperation interfacing comfort standards.",
+        "json": { "instruction": [ { "action": "go_to", "location": "repair station 2", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "repair station 2", "object": [ { "description": "component module", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "maintenance corridor", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "maintenance corridor", "object": [ { "description": "component module", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "resting area", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "resting area", "object": null, "duration": 600 } ] }
+    },
+    {
+        "instruction": "Go straight to the supply hatch and wait for the package to be placed on you. After that, move to the meeting area and remain there for 360 seconds.",
+        "json": { "instruction": [ { "action": "go_to", "location": "supply hatch", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "supply hatch", "object": [ { "description": "package", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "meeting area", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "meeting area", "object": null, "duration": 360 } ] }
+    },
+    {
+        "instruction": "Pick up the water testing kit from the laboratory and take it to the riverbank monitor station. After delivery, immediately proceed to the nearby weather station for a 30-minute waiting period to gather data.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "laboratory",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "laboratory",
+                    "object": [
+                        {
+                            "description": "water testing kit",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "riverbank monitor station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "riverbank monitor station",
+                    "object": [
+                        {
+                            "description": "water testing kit",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "nearby weather station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "nearby weather station",
+                    "object": null,
+                    "duration": 1800
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head to the engine test facility to gather diagnostic tools. Transport these to the hydraulic section while waiting for unloading. Once accomplished, proceed back to the maintenance depot to recharge for 60 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "engine test facility",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "engine test facility",
+                    "object": [
+                        {
+                            "description": "diagnostic tool",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "hydraulic section",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "hydraulic section",
+                    "object": [
+                        {
+                            "description": "diagnostic tool",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "maintenance depot",
+                    "object": null,
+                    "duration": 3600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Navigate to the workshop to collect the new fuel tank. Take it to the drone launch pad. Wait for 300 seconds for testing procedures, then return to the garage.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "workshop",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "workshop",
+                    "object": [
+                        {
+                            "description": "new fuel tank",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "drone launch pad",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "drone launch pad",
+                    "object": [
+                        {
+                            "description": "new fuel tank",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "drone launch pad",
+                    "object": null,
+                    "duration": 300
+                },
+                {
+                    "action": "go_to",
+                    "location": "garage",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to the orchard and collect the apple crates. Transport them to the cold storage and wait for the unloading process. Finally, make your way to the market entrance and stay for confirmation messages for 15 minutes.",
+        "json": { "instruction": [ { "action": "go_to", "location": "orchard", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "orchard", "object": [ { "description": "crate of apples", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "cold storage", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "cold storage", "object": [ { "description": "crate of apples", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "market entrance", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "market entrance", "object": null, "duration": 900 } ] }
+    },
+    {
+        "instruction": "Go to the storage unit for 2 batches of cables. Deliver them to the calibration lab for immediate unloading. Then, visit the security checkpoint and wait for identity verification, expected to be around 200 seconds, before your final position at the parking lot.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "storage unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage unit",
+                    "object": [
+                        {
+                            "description": "batch of cables",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "calibration lab",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "calibration lab",
+                    "object": [
+                        {
+                            "description": "batch of cables",
+                            "num": 2
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "security checkpoint",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "security checkpoint",
+                    "object": null,
+                    "duration": 200
+                },
+                {
+                    "action": "go_to",
+                    "location": "parking lot",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Make your way to the parts storehouse to pick up connectors. Bring them to the hydraulic station and wait for the unloading. Head to the nearby canteen for a short wait of 5 minutes to recharge sensors.",
+        "json": { "instruction": [ { "action": "go_to", "location": "parts storehouse", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "parts storehouse", "object": [ { "description": "connector", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "hydraulic station", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "hydraulic station", "object": [ { "description": "connector", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "nearby canteen", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "nearby canteen", "object": null, "duration": 300 } ] }
+    },
+    {
+        "instruction": "Collect the spare sensors from warehouse 3 and transport them to the telemetry section. Once delivered, go to the headquarters deck and remain on standby for 15 minutes for further orders.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "warehouse 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "warehouse 3",
+                    "object": [
+                        {
+                            "description": "spare sensor",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "telemetry section",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "telemetry section",
+                    "object": [
+                        {
+                            "description": "spare sensor",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "headquarters deck",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "headquarters deck",
+                    "object": null,
+                    "duration": 900
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head to the dairy unit to pick up milk containers. Deliver them to the refrigeration facility and verify the successful unloading. Then, proceed to the logistics checkpoint and wait for further instructions, expected in about 10 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "dairy unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "dairy unit",
+                    "object": [
+                        {
+                            "description": "milk container",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "refrigeration facility",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "refrigeration facility",
+                    "object": [
+                        {
+                            "description": "milk container",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "logistics checkpoint",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "logistics checkpoint",
+                    "object": null,
+                    "duration": 600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to the herb garden to gather the sample baskets. Once collected, take them to the analysis greenhouse. Stay briefly for 10 minutes to collaborate on preliminary findings.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "herb garden",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "herb garden",
+                    "object": [
+                        {
+                            "description": "sample basket",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "analysis greenhouse",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "analysis greenhouse",
+                    "object": [
+                        {
+                            "description": "sample basket",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "analysis greenhouse",
+                    "object": null,
+                    "duration": 600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect printed reports from office 12 and transfer them to conference room 3. Post-delivery, stop by the recreational area and wait for 15 minutes to take 3 boxes of paper",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "office 12",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "office 12",
+                    "object": [
+                        {
+                            "description": "printed report",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "conference room 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "conference room 3",
+                    "object": [
+                        {
+                            "description": "printed report",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "recreational area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "recreational area",
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "recreational area",
+                    "object": [
+                        {
+                            "description": "box of paper",
+                            "num": 3
+                        }
+                    ],
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Visit loading zone A to pick up the construction tools. Deliver these tools to site B. After delivery, wait for 5 minutes for confirmation of successful deployment before returning to the control office.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "loading zone A",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "loading zone A",
+                    "object": [
+                        {
+                            "description": "construction tool",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "site B",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "site B",
+                    "object": [
+                        {
+                            "description": "construction tool",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "site B",
+                    "object": null,
+                    "duration": 300
+                },
+                {
+                    "action": "go_to",
+                    "location": "control office",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Start from the central depot, proceed to the entry point for inspection, then head to the machinery hall to collect hydraulic fluid packs. Deliver them to zone 4. Wait 15 minutes for the engineers before returning to the depot.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "central depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "entry point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "machinery hall",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "machinery hall",
+                    "object": [
+                        {
+                            "description": "hydraulic fluid pack",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "zone 4",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "zone 4",
+                    "object": [
+                        {
+                            "description": "hydraulic fluid pack",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "zone 4",
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "go_to",
+                    "location": "central depot",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head to the logistics node to grab the sensor kits, transport them to lab 17b. Ensure all kits are removed prior to advancing to drone bay to fetch the aerial mapping tools. Deliver them to flight control, wait for acknowledgment, and return to lab 17b for subsequent tasks.",
+        "json": { "instruction": [ { "action": "go_to", "location": "logistics node", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "logistics node", "object": [ { "description": "sensor kit", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "lab 17b", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "lab 17b", "object": [ { "description": "sensor kit", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "drone bay", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "drone bay", "object": [ { "description": "aerial mapping tool", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "flight control", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "flight control", "object": [ { "description": "aerial mapping tool", "num": -1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "flight control", "object": null, "duration": -1 }, { "action": "go_to", "location": "lab 17b", "object": null, "duration": null } ] }
+    },
+    {
+        "instruction": "At the tech section, collect the sealed packages for delivery to the customer care unit. Unload promptly and then proceed to the recreation zone for a cooldown period of fifteen minutes. Afterward, head to the backup center for further transportation job.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "tech section",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "tech section",
+                    "object": [
+                        {
+                            "description": "sealed package",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "customer care unit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "customer care unit",
+                    "object": [
+                        {
+                            "description": "sealed package",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "recreation zone",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "recreation zone",
+                    "object": null,
+                    "duration": 900
+                },
+                {
+                    "action": "go_to",
+                    "location": "backup center",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Move to the plastics section to pick up recycling crates for the transfer point. Unload swiftly and continue to the central navigation office for further deployment for 25 minutes before swinging by the innovation hub.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "plastics section",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "plastics section",
+                    "object": [
+                        {
+                            "description": "recycling crate",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "transfer point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "transfer point",
+                    "object": [
+                        {
+                            "description": "recycling crate",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "central navigation office",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "central navigation office",
+                    "object": null,
+                    "duration": 1500
+                },
+                {
+                    "action": "go_to",
+                    "location": "innovation hub",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Transport solar panels from the energy stockade to the grid installation site. After leaving units, detour to logistics command and hold for system synchronization for 5 minutes, then circle back to grid installation for final checks.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "energy stockade",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "energy stockade",
+                    "object": [
+                        {
+                            "description": "solar panel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "grid installation site",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "grid installation site",
+                    "object": [
+                        {
+                            "description": "solar panel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "logistics command",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "logistics command",
+                    "object": null,
+                    "duration": 300
+                },
+                {
+                    "action": "go_to",
+                    "location": "grid installation site",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Obtain the data cards from the data intake area, then head to the processing chamber for upload. After confirming upload, go to the connectivity hub to monitor 8 minutes of signal activity, before settling back at the data intake for housekeeping tasks.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "data intake area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "data intake area",
+                    "object": [
+                        {
+                            "description": "data card",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "processing chamber",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "processing chamber",
+                    "object": [
+                        {
+                            "description": "data card",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "connectivity hub",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "connectivity hub",
+                    "object": null,
+                    "duration": 480
+                },
+                {
+                    "action": "go_to",
+                    "location": "data intake area",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to assembly site B, pick up structural beams, make way to construction hub shortly after. Then, retrieve finished items from packing zone before reconvening at design office for 15 minutes. Loop back to assembly site B and drop off everything there.",
+        "json": { "instruction": [ { "action": "go_to", "location": "assembly site B", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "assembly site B", "object": [ { "description": "structural beam", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "construction hub", "object": null, "duration": null }, { "action": "go_to", "location": "packing zone", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "packing zone", "object": [ { "description": "finished item", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "design office", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "design office", "object": null, "duration": 900 }, { "action": "go_to", "location": "assembly site B", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "assembly site B", "object": [ { "description": "structural beam", "num": -1 }, { "description": "finished item", "num": -1 } ], "duration": null } ] }
+    },
+    {
+        "instruction": "Secure the exterior lights from storage depot, take them to the illumination hub. Afterwards, reach the dispatch point and pause briefly for 300 seconds for routing assessment.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "storage depot",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage depot",
+                    "object": [
+                        {
+                            "description": "exterior light",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "illumination hub",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "illumination hub",
+                    "object": [
+                        {
+                            "description": "exterior light",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "dispatch point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "dispatch point",
+                    "object": null,
+                    "duration": 300
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "At station 7, collect the motor oil barrels for dispatch to engine maintenance bay. Confirm total unloading, then infiltrate command driveway and await 15 minutes for additional maintenance protocols.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "station 7",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "station 7",
+                    "object": [
+                        {
+                            "description": "motor oil barrel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "engine maintenance bay",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "engine maintenance bay",
+                    "object": [
+                        {
+                            "description": "motor oil barrel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "command driveway",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "command driveway",
+                    "object": null,
+                    "duration": 900
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head over to stockpile D for critical components handling, transfer to robotics facility. Unload and then go to computation wing, maintain standstill for 14 minutes during system restoration.",
+        "json": { "instruction": [ { "action": "go_to", "location": "stockpile D", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "stockpile D", "object": [ { "description": "critical component", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "robotics facility", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "robotics facility", "object": [ { "description": "critical component", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "computation wing", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "computation wing", "object": null, "duration": 840 } ] }
+    },
+    {
+        "instruction": "From storage facility K, collect the advanced routers, bring them to transmission node 4 promptly. Once offloaded, travel immediately to reception area, pause 600 seconds for evaluation of system comfort levels.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "storage facility K",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage facility K",
+                    "object": [
+                        {
+                            "description": "advanced router",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "transmission node 4",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "transmission node 4",
+                    "object": [
+                        {
+                            "description": "advanced router",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "reception area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "reception area",
+                    "object": null,
+                    "duration": 600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Embark at stationary site 1 for pallet cages, pilot towards storage compound area A. Once fulfilled, remain in restoration channel holding for 5 minutes then move back where the instructions initiated.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "stationary site 1",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "duration": null,
+                    "location": "stationary site 1",
+                    "object": [
+                        {
+                            "description": "pallet cage",
+                            "num": -1
+                        }
+                    ]
+                },
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "storage compound area A",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "duration": null,
+                    "location": "storage compound area A",
+                    "object": [
+                        {
+                            "description": "pallet cage",
+                            "num": -1
+                        }
+                    ]
+                },
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "restoration channel",
+                    "object": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "duration": 300,
+                    "location": "restoration channel",
+                    "object": null
+                },
+                {
+                    "action": "go_to",
+                    "duration": null,
+                    "location": "stationary site 1",
+                    "object": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Convey anchor bolts from holding area 5 to utility shed. After disengaging, cover the central point for resting while awaiting inputs demolition team within 10 specific minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "holding area 5",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "holding area 5",
+                    "object": [
+                        {
+                            "description": "anchor bolt",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "utility shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "utility shed",
+                    "object": [
+                        {
+                            "description": "anchor bolt",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "central point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "central point",
+                    "object": null,
+                    "duration": 600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Proceed to station B harbor to collect steel cables and shift onwards to sorting chamber. Upon successful dispatch, travel to semi-platform surface, maintain awaiting channel for 25 minutes data briefing.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "station B harbor",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "station B harbor",
+                    "object": [
+                        {
+                            "description": "steel cable",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "sorting chamber",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "sorting chamber",
+                    "object": [
+                        {
+                            "description": "steel cable",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "semi-platform surface",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "semi-platform surface",
+                    "object": null,
+                    "duration": 1500
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Venture to assembly pod for microchips, bridge gap towards electronics hub transit. Post-unloading, abandon at technical lounge, aligning 11 minutes restful observational break supporting coded knits.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "assembly pod",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "assembly pod",
+                    "object": [
+                        {
+                            "description": "microchip",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "electronics hub transit",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "electronics hub transit",
+                    "object": [
+                        {
+                            "description": "microchip",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "technical lounge",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "technical lounge",
+                    "object": null,
+                    "duration": 660
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Capture technical orders at the conference suite C. Migrate those orders to digital notebook area, clear timely filming, then circulate along comms relay focus axis at end interval lasting 15 minutes.",
+        "json": { "instruction": [ { "action": "go_to", "location": "conference suite C", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "conference suite C", "object": [ { "description": "technical order", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "digital notebook area", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "digital notebook area", "object": [ { "description": "technical order", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "comms relay focus axis", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "comms relay focus axis", "object": null, "duration": 900 } ] }
+    },
+    {
+        "instruction": "At deployment center collect emergency power packs, align path towards main headquarters. Once accomplished, convene at relay junction for a 18 minute sleep.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "deployment center",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "deployment center",
+                    "object": [
+                        {
+                            "description": "emergency power pack",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "main headquarters",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "relay junction",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "relay junction",
+                    "object": [
+                        {
+                            "description": "satellite relay",
+                            "num": -1
+                        }
+                    ],
+                    "duration": 1080
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect electronic parts from component assembly line 3, present them to validation sector. Once verified, hop towards remote access point following 5 minutes break for net signal assessments.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "component assembly line 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "component assembly line 3",
+                    "object": [
+                        {
+                            "description": "electronic part",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "validation sector",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "validation sector",
+                    "object": [
+                        {
+                            "description": "electronic part",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "remote access point",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "remote access point",
+                    "object": null,
+                    "duration": 300
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Transport navigational notebooks from library annexed area, immediately proceed to station zone X. Upon arrival, drop your payload there and take your final position at security chamber, then 6 minutes sleep is obligatory until further positioning.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "library annexed area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "library annexed area",
+                    "object": [
+                        {
+                            "description": "navigational notebook",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "station zone X",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "station zone X",
+                    "object": [
+                        {
+                            "description": "navigational notebook",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "security chamber",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "security chamber",
+                    "object": null,
+                    "duration": 360
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Committed engagement over roundtable briefcase transfers, office cubicle W assurance. Walk sequencing to media control station, spend there 5 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "roundtable",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "roundtable",
+                    "object": [
+                        {
+                            "description": "briefcase",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "office cubicle W",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "office cubicle W",
+                    "object": [
+                        {
+                            "description": "briefcase",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "media control station",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "media control station",
+                    "object": null,
+                    "duration": 300
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Travel to the orchard to collect the basket of apples. Then proceed to the packing facility where the apples should be unloaded. Once done, navigate to the maintenance area and wait for further instructions for 10 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "orchard",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "orchard",
+                    "object": [
+                        {
+                            "description": "basket of apples",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "packing facility",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "packing facility",
+                    "object": [
+                        {
+                            "description": "basket of apples",
+                            "num": 1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "maintenance area",
+                    "object": null,
+                    "duration": 600
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Head to the loading dock and pick up three stack of metal sheets. Deliver these to the welding station and wait for them to be unloaded. After that, move to the observation deck and remain there for 20 minutes before visiting the logistics office. From there, take some empty boxes to the starting point.",
+        "json": { "instruction": [ { "action": "go_to", "location": "loading dock", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "loading dock", "object": [ { "description": "stack of metal sheets", "num": 3 } ], "duration": null }, { "action": "go_to", "location": "welding station", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "welding station", "object": [ { "description": "stack of metal sheets", "num": 3 } ], "duration": null }, { "action": "go_to", "location": "observation deck", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "observation deck", "object": null, "duration": 1200 }, { "action": "go_to", "location": "logistics office", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "logistics office", "object": [ { "description": "empty box", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "starting point", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "starting point", "object": [ { "description": "empty box", "num": -1 } ], "duration": null } ] }
+    },
+    {
+        "instruction": "Move to the storage bay and pick up the coolant barrels. Deliver them to the engineering section and wait for them to be unloaded. Afterward, proceed to the hydration booth for a 15-minute waiting period.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "storage bay",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage bay",
+                    "object": [
+                        {
+                            "description": "coolant barrel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "engineering section",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "engineering section",
+                    "object": [
+                        {
+                            "description": "coolant barrel",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "hydration booth",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "hydration booth",
+                    "object": null,
+                    "duration": 900
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Collect pallets of bricks at the quarry and transport them to the construction site for unloading. Following this, proceed to the equipment shed for a 40-minute standby period before heading back to the quarry.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "quarry",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "quarry",
+                    "object": [
+                        {
+                            "description": "pallet of bricks",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "construction site",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "construction site",
+                    "object": [
+                        {
+                            "description": "pallet of bricks",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "equipment shed",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "equipment shed",
+                    "object": null,
+                    "duration": 2400
+                },
+                {
+                    "action": "go_to",
+                    "location": "quarry",
+                    "object": null,
+                    "duration": null
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Gathering fiber optic cables from storage block Y, bringing them somewhere near the tower establishment. Return to the optics factory and remain there for eight minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "storage block Y",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "storage block Y",
+                    "object": [
+                        {
+                            "description": "fiber optic cable",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "tower establishment",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "tower establishment",
+                    "object": [
+                        {
+                            "description": "fiber optic cable",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "optics factory",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "optics factory",
+                    "object": null,
+                    "duration": 480
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Set initiative kit collection phase at processing line, evenly distribute throughout sector line. Go to the focal area and stay for 9 minutes.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "processing line",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "processing line",
+                    "object": [
+                        {
+                            "description": "initiative kit",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "sector line",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "sector line",
+                    "object": [
+                        {
+                            "description": "initiative kit",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "focal area",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "focal area",
+                    "object": null,
+                    "duration": 540
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "First, go to the reception area and wait there for 120 seconds. After that, move to the technical station and pick up the payload. Deliver it to the production core and pause for 90 seconds. Then proceed to the storage hatch, wait until another payload is placed on you, and finally transport it to the control room.",
+        "json": { "instruction": [ { "action": "go_to", "location": "reception area", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "reception area", "object": null, "duration": 120 }, { "action": "go_to", "location": "technical station", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "technical station", "object": [ { "description": "payload", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "production core", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "production core", "object": [ { "description": "payload", "num": 1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "production core", "object": null, "duration": 90 }, { "action": "go_to", "location": "storage hatch", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "storage hatch", "object": [ { "description": "payload", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "control room", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "control room", "object": [ { "description": "payload", "num": 1 } ], "duration": null } ] }
+    },
+    {
+        "instruction": "Go to storage chamber 7 and wait there for 600 seconds. Then move to the relay station, pick up the payload, and deliver it to the cluster area. After that, continue to storage chamber 10 and remain there for another 600 seconds.",
+        "json": { "instruction": [ { "action": "go_to", "location": "storage chamber 7", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "storage chamber 7", "object": null, "duration": 600 }, { "action": "go_to", "location": "relay station", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "relay station", "object": [ { "description": "payload", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "cluster area", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "cluster area", "object": [ { "description": "payload", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "storage chamber 10", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "storage chamber 10", "object": null, "duration": 600 } ] }
+    },
+    {
+        "instruction": "Move to station terminal 3 and pick up the nutritional supplement package. Deliver it to distribution center C. After completing the delivery, head to the steering cabin and remain there for 1020 seconds.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "station terminal 3",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "station terminal 3",
+                    "object": [
+                        {
+                            "description": "nutritional supplement package",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "steering cabin",
+                    "object": null,
+                    "duration": 1020
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go to the furnishing stockpile and pick up the design package. Deliver it to the design room. After that, proceed to the node access area and wait there for 300 seconds. Finally, move to the navigation controls room.",
+        "json": { "instruction": [ { "action": "go_to", "location": "furnishing stockpile", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "furnishing stockpile", "object": [ { "description": "design package", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "design room", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "design room", "object": [ { "description": "design package", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "node access area", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "node access area", "object": null, "duration": 300 }, { "action": "go_to", "location": "navigation controls room", "object": null, "duration": null } ] }
+    },
+    {
+        "instruction": "Start at the energy hub and wait there for 240 seconds while systems stabilize. Then move to supply dock B, pick up the resource crate, and deliver it to the analysis chamber. After completing the delivery, continue to the observation deck and stay there for 180 seconds before returning to the main control point.",
+        "json": { "instruction": [ { "action": "go_to", "location": "energy hub", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "energy hub", "object": null, "duration": 240 }, { "action": "go_to", "location": "supply dock B", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "supply dock B", "object": [ { "description": "resource crate", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "analysis chamber", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "analysis chamber", "object": [ { "description": "resource crate", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "observation deck", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "observation deck", "object": null, "duration": 180 }, { "action": "go_to", "location": "main control point", "object": null, "duration": null } ] }
+    },
+    {
+        "instruction": "Acquisition complete at lower sector for hydraulic pumps to accompany maintenance yard promptly. To capture all figures analyzed in weather centuries over life 34 minutes paused utilization.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "lower sector",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "lower sector",
+                    "object": [
+                        {
+                            "description": "hydraulic pump",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "maintenance yard",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "maintenance yard",
+                    "object": null,
+                    "duration": 2040
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Reach botanical station to collect samples, deposit them at botanical lab 3. Then, run toward research wing for precise observation interval lasting 8 minutes before advancing further to pick up empty bottles.",
+        "json": { "instruction": [ { "action": "go_to", "location": "botanical station", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "botanical station", "object": [ { "description": "sample", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "botanical lab 3", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "botanical lab 3", "object": [ { "description": "sample", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "research wing", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "research wing", "object": null, "duration": 480 }, { "action": "wait_for_payload_ready", "location": "research wing", "object": [ { "description": "empty bottles", "num": -1 } ], "duration": null } ] }
+    },
+    {
+        "instruction": "Travel to the carpentry workshop to pick up the assembled wooden crates. Deliver these to the shipment department, unload them, and prepare to wait for 45 minutes for further guidance.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "carpentry workshop",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "carpentry workshop",
+                    "object": [
+                        {
+                            "description": "assembled wooden crate",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "shipment department",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "shipment department",
+                    "object": [
+                        {
+                            "description": "assembled wooden crate",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "shipment department",
+                    "object": null,
+                    "duration": 2700
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Go directly to engineering zone for blueprints, deliver them to processing unit X. Wait briefly for ten minutes and proceed to stock room for item catalog retrieval.",
+        "json": ChatGPT said:
+
+{ "instruction": [ { "action": "go_to", "location": "engineering zone", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "engineering zone", "object": [ { "description": "blueprint", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "processing unit X", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "processing unit X", "object": [ { "description": "blueprint", "num": -1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "processing unit X", "object": null, "duration": 600 }, { "action": "go_to", "location": "stock room", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "stock room", "object": [ { "description": "item catalog", "num": 1 } ], "duration": null } ] }
+    },
+    {
+        "instruction": "Reach loading bay B to retrieve external batteries, depart to station dock for direct chaining. Assist fleet realignment procedures recruiting 5 minutes solid performance, variance achieved by set post with finality.",
+        "json": {
+            "instruction": [
+                {
+                    "action": "go_to",
+                    "location": "loading bay B",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_ready",
+                    "location": "loading bay B",
+                    "object": [
+                        {
+                            "description": "external battery",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "station dock",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_seconds",
+                    "location": "station dock",
+                    "object": null,
+                    "duration": 300
+                }
+            ]
+        }
+    },
+    {
+        "instruction": "Drive from tech bay X and extract pivotal communicative notes to fulfil dispatch node B requests. Unleash connectivity measures taken 5 minutes, then charges to supply depot for module fit.",
+        "json": { "instruction": [ { "action": "go_to", "location": "tech bay X", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "tech bay X", "object": [ { "description": "pivotal communicative note", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "dispatch node B", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "dispatch node B", "object": [ { "description": "pivotal communicative note", "num": -1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "dispatch node B", "object": null, "duration": 300 }, { "action": "go_to", "location": "supply depot", "object": null, "duration": null } ] }
+    }
+]
