@@ -4,13 +4,13 @@
         "json": {
             "instruction": [
                 { "action": "go_to", "location": "assembly sector", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "assembly sector", "object": [{ "description": "machine components", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "assembly sector", "object": [{ "description": "machine components", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "production facility", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "production facility", "object": [{ "description": "machine components", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_removal", "location": "production facility", "object": [{ "description": "machine components", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "storage site", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "storage site", "object": [{ "description": "shipment of lubricants", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "storage site", "object": [{ "description": "shipment of lubricants", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "engineering lab", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "engineering lab", "object": [{ "description": "shipment of lubricants", "num": "some" }], "duration": null }
+                { "action": "wait_for_payload_removal", "location": "engineering lab", "object": [{ "description": "shipment of lubricants", "num": -1 }], "duration": null }
             ]
         }
     },
@@ -37,9 +37,9 @@
                 { "action": "go_to", "location": "test station", "object": null, "duration": null },
                 { "action": "wait_for_payload_removal", "location": "test station", "object": [{ "description": "electronics module", "num": "1" }], "duration": null },
                 { "action": "go_to", "location": "warehouse", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "warehouse", "object": [{ "description": "batch of resistors", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "warehouse", "object": [{ "description": "batch of resistors", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "assembly workshop", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "assembly workshop", "object": [{ "description": "batch of resistors", "num": "some" }], "duration": null }
+                { "action": "wait_for_payload_removal", "location": "assembly workshop", "object": [{ "description": "batch of resistors", "num": -1 }], "duration": null }
             ]
         }
     },
@@ -52,9 +52,9 @@
                 { "action": "go_to", "location": "maintenance area", "object": null, "duration": null },
                 { "action": "wait_for_payload_removal", "location": "maintenance area", "object": [{ "description": "diagnostic toolkit", "num": "1" }], "duration": null },
                 { "action": "go_to", "location": "supply room", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "supply room", "object": [{ "description": "replacement fuses", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "supply room", "object": [{ "description": "replacement fuses", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "control station", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "control station", "object": [{ "description": "replacement fuses", "num": "some" }], "duration": null }
+                { "action": "wait_for_payload_removal", "location": "control station", "object": [{ "description": "replacement fuses", "num": -1 }], "duration": null }
             ]
         }
     },
@@ -63,13 +63,13 @@
         "json": {
             "instruction": [
                 { "action": "go_to", "location": "material depot", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "material depot", "object": [{ "description": "steel rods", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "material depot", "object": [{ "description": "steel rods", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "manufacturing plant", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "manufacturing plant", "object": [{ "description": "steel rods", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_removal", "location": "manufacturing plant", "object": [{ "description": "steel rods", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "central warehouse", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "central warehouse", "object": [{ "description": "batch of electrical components", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "central warehouse", "object": [{ "description": "batch of electrical components", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "assembly line", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "assembly line", "object": [{ "description": "batch of electrical components", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_removal", "location": "assembly line", "object": [{ "description": "batch of electrical components", "num": -1 }], "duration": null },
                 { "action": "wait_for_seconds", "location": "assembly line", "object": null, "duration": 600 },
                 { "action": "go_to", "location": "main control center", "object": null, "duration": null }
             ]
@@ -92,13 +92,13 @@
         "json": {
             "instruction": [
                 { "action": "go_to", "location": "shipping dock", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "shipping dock", "object": [{ "description": "order of mechanical gears", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "shipping dock", "object": [{ "description": "order of mechanical gears", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "gear assembly station", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "gear assembly station", "object": [{ "description": "order of mechanical gears", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_removal", "location": "gear assembly station", "object": [{ "description": "order of mechanical gears", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "inspection unit", "object": null, "duration": null },
                 { "action": "wait_for_seconds", "location": "inspection unit", "object": null, "duration": 900 },
                 { "action": "go_to", "location": "return area", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "return area", "object": [{ "description": "defective gears", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_removal", "location": "return area", "object": [{ "description": "defective gears", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "dispatch hub", "object": null, "duration": null }
             ]
         }
@@ -108,9 +108,9 @@
         "json": {
             "instruction": [
                 { "action": "go_to", "location": "storage yard", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "storage yard", "object": [{ "description": "batch of replacement parts", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "storage yard", "object": [{ "description": "batch of replacement parts", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "vehicle maintenance center", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "vehicle maintenance center", "object": [{ "description": "batch of replacement parts", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_removal", "location": "vehicle maintenance center", "object": [{ "description": "batch of replacement parts", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "logistics station", "object": null, "duration": null },
                 { "action": "wait_for_seconds", "location": "logistics station", "object": null, "duration": 1200 },
                 { "action": "go_to", "location": "starting zone", "object": null, "duration": null }
@@ -121,9 +121,9 @@
       "instruction": "Fetch spare solar panels from warehouse B, deliver to energy station 5, wait 15 minutes, then move to the garage for inspection.",
       "json": {"instruction": [
         {"action": "go_to", "location": "warehouse B", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "warehouse B", "object": [{"description": "spare solar panels", "num": "some"}], "duration": null},
+        {"action": "wait_for_payload_ready", "location": "warehouse B", "object": [{"description": "spare solar panels", "num": -1}], "duration": null},
         {"action": "go_to", "location": "energy station 5", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "energy station 5", "object": [{"description": "spare solar panels", "num": "some"}], "duration": null},
+        {"action": "wait_for_payload_removal", "location": "energy station 5", "object": [{"description": "spare solar panels", "num": -1}], "duration": null},
         {"action": "wait_for_seconds", "location": "energy station 5", "object": null, "duration": 900},
         {"action": "go_to", "location": "garage", "object": null, "duration": null}
       ]}
@@ -196,9 +196,9 @@
         { "action": "go_to", "location": "mobile clinic", "object": null, "duration": null },
         { "action": "wait_for_payload_removal", "location": "mobile clinic", "object": [{ "description": "crate of vaccine vials", "num": "1" }], "duration": null },
         { "action": "go_to", "location": "medical tent", "object": null, "duration": null },
-        { "action": "wait_for_payload_ready", "location": "medical tent", "object": [{ "description": "used test kits", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_ready", "location": "medical tent", "object": [{ "description": "used test kits", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "incinerator", "object": null, "duration": null },
-        { "action": "wait_for_payload_removal", "location": "incinerator", "object": [{ "description": "used test kits", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_removal", "location": "incinerator", "object": [{ "description": "used test kits", "num": -1 }], "duration": null },
         { "action": "wait_for_seconds", "location": "incinerator", "object": null, "duration": 300 }
       ]
     }
@@ -208,13 +208,13 @@
     "json": {
       "instruction": [
         { "action": "go_to", "location": "print shop", "object": null, "duration": null },
-        { "action": "wait_for_payload_ready", "location": "print shop", "object": [{ "description": "rolled banners", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_ready", "location": "print shop", "object": [{ "description": "rolled banners", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "west gate", "object": null, "duration": null },
-        { "action": "wait_for_payload_removal", "location": "west gate", "object": [{ "description": "rolled banners", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_removal", "location": "west gate", "object": [{ "description": "rolled banners", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "signboard depot", "object": null, "duration": null },
-        { "action": "wait_for_payload_ready", "location": "signboard depot", "object": [{ "description": "wooden stakes", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_ready", "location": "signboard depot", "object": [{ "description": "wooden stakes", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "north gate", "object": null, "duration": null },
-        { "action": "wait_for_payload_removal", "location": "north gate", "object": [{ "description": "wooden stakes", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_removal", "location": "north gate", "object": [{ "description": "wooden stakes", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "security post", "object": null, "duration": null }
       ]
     }
@@ -255,9 +255,9 @@
         { "action": "wait_for_payload_ready", "location": "Greenhouse A", "object": [{ "description": "pack of fertilizer spikes", "num": "1" }], "duration": null },
         { "action": "go_to", "location": "Orchard Shed", "object": null, "duration": null },
         { "action": "wait_for_payload_removal", "location": "Orchard Shed", "object": [{ "description": "pack of fertilizer spikes", "num": "1" }], "duration": null },
-        { "action": "wait_for_payload_ready", "location": "Orchard Shed", "object": [{ "description": "empty crates", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_ready", "location": "Orchard Shed", "object": [{ "description": "empty crates", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "recycling point", "object": null, "duration": null },
-        { "action": "wait_for_payload_removal", "location": "recycling point", "object": [{ "description": "empty crates", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_removal", "location": "recycling point", "object": [{ "description": "empty crates", "num": -1 }], "duration": null },
         { "action": "wait_for_seconds", "location": "recycling point", "object": null, "duration": 120 },
         { "action": "go_to", "location": "shade station", "object": null, "duration": null }
       ]

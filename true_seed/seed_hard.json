@@ -158,9 +158,9 @@
         { "action": "go_to", "location": "wind-turbine site", "object": null, "duration": null },
         { "action": "wait_for_payload_removal", "location": "wind-turbine site", "object": [{ "description": "diagnostic toolkit", "num": "1" }], "duration": null },
         { "action": "wait_for_seconds", "location": null, "object": null, "duration": 7200 },
-        { "action": "wait_for_payload_ready", "location": "wind-turbine site", "object": [{ "description": "used oil filters", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_ready", "location": "wind-turbine site", "object": [{ "description": "used oil filters", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "recycling center", "object": null, "duration": null },
-        { "action": "wait_for_payload_removal", "location": "recycling center", "object": [{ "description": "used oil filters", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_removal", "location": "recycling center", "object": [{ "description": "used oil filters", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "rest area", "object": null, "duration": null }
       ]
     }
@@ -223,9 +223,9 @@
         { "action": "wait_for_seconds", "location": null, "object": null, "duration": 120 },
         { "action": "go_to", "location": "cooling tower", "object": null, "duration": null },
         { "action": "wait_for_payload_removal", "location": "cooling tower", "object": [{ "description": "sealed barrels of antifreeze", "num": "3" }], "duration": null },
-        { "action": "wait_for_payload_ready", "location": "cooling tower", "object": [{ "description": "empty barrels", "num": "some" }], "duration": null },
+        { "action": "wait_for_payload_ready", "location": "cooling tower", "object": [{ "description": "empty barrels", "num": -1 }], "duration": null },
         { "action": "go_to", "location": "disposal site", "object": null, "duration": null },
-        { "action": "wait_for_payload_removal", "location": "disposal site", "object": [{ "description": "empty barrels", "num": "some" }], "duration": null }
+        { "action": "wait_for_payload_removal", "location": "disposal site", "object": [{ "description": "empty barrels", "num": -1 }], "duration": null }
       ]
     }
   },

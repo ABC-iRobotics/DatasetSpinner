@@ -67,7 +67,7 @@
                     "object": [
                         {
                             "description": "shipment of screws",
-                            "num": "some"
+                            "num": -1
                         }
                     ],
                     "duration": null
@@ -84,7 +84,7 @@
                     "object": [
                         {
                             "description": "shipment of screws",
-                            "num": "some"
+                            "num": -1
                         }
                     ],
                     "duration": null
@@ -216,9 +216,9 @@
         "json": {
             "instruction": [
                 { "action": "go_to", "location": "docking station", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "docking station", "object": [{ "description": "batch of materials", "num": "some" }], "duration": null },
+                { "action": "wait_for_payload_ready", "location": "docking station", "object": [{ "description": "batch of materials", "num": -1 }], "duration": null },
                 { "action": "go_to", "location": "production line", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "production line", "object": [{ "description": "batch of materials", "num": "some" }], "duration": null }
+                { "action": "wait_for_payload_removal", "location": "production line", "object": [{ "description": "batch of materials", "num": -1 }], "duration": null }
             ]
         }
     },
@@ -236,45 +236,45 @@
       "instruction": "Move to the greenhouse, pick up flower pots, and drop them at the garden entrance.",
       "json": {"instruction": [
         {"action": "go_to", "location": "greenhouse", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "greenhouse", "object": [{"description": "flower pots", "num": "some"}], "duration": null},
+        {"action": "wait_for_payload_ready", "location": "greenhouse", "object": [{"description": "flower pots", "num": -1}], "duration": null},
         {"action": "go_to", "location": "garden entrance", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "garden entrance", "object": [{"description": "flower pots", "num": "some"}], "duration": null}
+        {"action": "wait_for_payload_removal", "location": "garden entrance", "object": [{"description": "flower pots", "num": -1}], "duration": null}
       ]}
     },
     {
       "instruction": "Collect boxes from the loading bay and deliver them to storage room 2.",
       "json": {"instruction": [
         {"action": "go_to", "location": "loading bay", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "loading bay", "object": [{"description": "boxes", "num": "some"}], "duration": null},
+        {"action": "wait_for_payload_ready", "location": "loading bay", "object": [{"description": "boxes", "num": -1}], "duration": null},
         {"action": "go_to", "location": "storage room 2", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "storage room 2", "object": [{"description": "boxes", "num": "some"}], "duration": null}
+        {"action": "wait_for_payload_removal", "location": "storage room 2", "object": [{"description": "boxes", "num": -1}], "duration": null}
       ]}
     },
     {
       "instruction": "Retrieve fertilizer bags from shed A and drop them off at the orchard gate.",
       "json": {"instruction": [
         {"action": "go_to", "location": "shed A", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "shed A", "object": [{"description": "fertilizer bags", "num": "some"}], "duration": null},
+        {"action": "wait_for_payload_ready", "location": "shed A", "object": [{"description": "fertilizer bags", "num": -1}], "duration": null},
         {"action": "go_to", "location": "orchard gate", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "orchard gate", "object": [{"description": "fertilizer bags", "num": "some"}], "duration": null}
+        {"action": "wait_for_payload_removal", "location": "orchard gate", "object": [{"description": "fertilizer bags", "num": -1}], "duration": null}
       ]}
     },
     {
       "instruction": "Pick up harvested carrots from the vegetable patch and take them to the farmhouse.",
       "json": {"instruction": [
         {"action": "go_to", "location": "vegetable patch", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "vegetable patch", "object": [{"description": "harvested carrots", "num": "some"}], "duration": null},
+        {"action": "wait_for_payload_ready", "location": "vegetable patch", "object": [{"description": "harvested carrots", "num": -1}], "duration": null},
         {"action": "go_to", "location": "farmhouse", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "farmhouse", "object": [{"description": "harvested carrots", "num": "some"}], "duration": null}
+        {"action": "wait_for_payload_removal", "location": "farmhouse", "object": [{"description": "harvested carrots", "num": -1}], "duration": null}
       ]}
     },
     {
       "instruction": "Transport sandbags from the depot to floodgate 3.",
       "json": {"instruction": [
         {"action": "go_to", "location": "depot", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "depot", "object": [{"description": "sandbags", "num": "some"}], "duration": null},
+        {"action": "wait_for_payload_ready", "location": "depot", "object": [{"description": "sandbags", "num": -1}], "duration": null},
         {"action": "go_to", "location": "floodgate 3", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "floodgate 3", "object": [{"description": "sandbags", "num": "some"}], "duration": null}
+        {"action": "wait_for_payload_removal", "location": "floodgate 3", "object": [{"description": "sandbags", "num": -1}], "duration": null}
       ]}
     }
 ]
