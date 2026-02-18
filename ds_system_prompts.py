@@ -211,9 +211,6 @@ Core principle: count what the robot physically manipulates. If the robot moves 
 * “N X and Y” → X→N; Y→-1 (do not spread counts).
 * “N pairs of gloves” → description “pair of gloves”, num N.
 
-7. No / zero
-* “no/zero X” → num 0.
-
 DESCRIPTION NORMALIZATION
 * Keep descriptions faithful to what’s being mentioned in the instruction.
 * If a container/aggregate exists, keep the full container phrase (e.g., “crate of harvested apples”, “stack of metal rods”, “bag of sweet chili”).
