@@ -3432,12 +3432,7 @@
                 {
                     "action": "wait_for_seconds",
                     "location": "relay junction",
-                    "object": [
-                        {
-                            "description": "satellite relay",
-                            "num": -1
-                        }
-                    ],
+                    "object": null,
                     "duration": 1080
                 }
             ]
@@ -3907,6 +3902,29 @@
                     "duration": null
                 },
                 {
+                    "action": "go_to",
+                    "location": "distribution center C",
+                    "object": null,
+                    "duration": null
+                },
+                {
+                    "action": "wait_for_payload_removal",
+                    "location": "distribution center C",
+                    "object": [
+                        {
+                            "description": "nutritional supplement package",
+                            "num": -1
+                        }
+                    ],
+                    "duration": null
+                },
+                {
+                    "action": "go_to",
+                    "location": "steering cabin",
+                    "object": null,
+                    "duration": null
+                },
+                {
                     "action": "wait_for_seconds",
                     "location": "steering cabin",
                     "object": null,
@@ -3924,7 +3942,7 @@
         "json": { "instruction": [ { "action": "go_to", "location": "energy hub", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "energy hub", "object": null, "duration": 240 }, { "action": "go_to", "location": "supply dock B", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "supply dock B", "object": [ { "description": "resource crate", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "analysis chamber", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "analysis chamber", "object": [ { "description": "resource crate", "num": 1 } ], "duration": null }, { "action": "go_to", "location": "observation deck", "object": null, "duration": null }, { "action": "wait_for_seconds", "location": "observation deck", "object": null, "duration": 180 }, { "action": "go_to", "location": "main control point", "object": null, "duration": null } ] }
     },
     {
-        "instruction": "Acquisition complete at lower sector for hydraulic pumps to accompany maintenance yard promptly. To capture all figures analyzed in weather centuries over life 34 minutes paused utilization.",
+        "instruction": "Acquisition starts at lower sector for hydraulic pumps, accompany maintenance yard when you are finished. To capture all weather related information, 34 minutes paused utilization is required.",
         "json": {
             "instruction": [
                 {
@@ -3934,7 +3952,7 @@
                     "duration": null
                 },
                 {
-                    "action": "wait_for_payload_removal",
+                    "action": "wait_for_payload_ready",
                     "location": "lower sector",
                     "object": [
                         {
@@ -4012,9 +4030,7 @@
     },
     {
         "instruction": "Go directly to engineering zone for blueprints, deliver them to processing unit X. Wait briefly for ten minutes and proceed to stock room for item catalog retrieval.",
-        "json": ChatGPT said:
-
-{ "instruction": [ { "action": "go_to", "location": "engineering zone", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "engineering zone", "object": [ { "description": "blueprint", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "processing unit X", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "processing unit X", "object": [ { "description": "blueprint", "num": -1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "processing unit X", "object": null, "duration": 600 }, { "action": "go_to", "location": "stock room", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "stock room", "object": [ { "description": "item catalog", "num": 1 } ], "duration": null } ] }
+        "json": { "instruction": [ { "action": "go_to", "location": "engineering zone", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "engineering zone", "object": [ { "description": "blueprint", "num": -1 } ], "duration": null }, { "action": "go_to", "location": "processing unit X", "object": null, "duration": null }, { "action": "wait_for_payload_removal", "location": "processing unit X", "object": [ { "description": "blueprint", "num": -1 } ], "duration": null }, { "action": "wait_for_seconds", "location": "processing unit X", "object": null, "duration": 600 }, { "action": "go_to", "location": "stock room", "object": null, "duration": null }, { "action": "wait_for_payload_ready", "location": "stock room", "object": [ { "description": "item catalog", "num": 1 } ], "duration": null } ] }
     },
     {
         "instruction": "Reach loading bay B to retrieve external batteries, depart to station dock for direct chaining. Assist fleet realignment procedures recruiting 5 minutes solid performance, variance achieved by set post with finality.",
