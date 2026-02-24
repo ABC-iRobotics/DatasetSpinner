@@ -1,280 +1,530 @@
 [
-    {
-        "instruction": "Head to the assembly line to pick up the gearbox. Deliver it to the maintenance room, ensuring it is unloaded. Then, proceed to the control tower and stay there for 10 minutes before returning to the start position. Navigate to the loading dock to collect the shipment of screws. Transfer them to the storage area. Once unloaded, proceed to the central hub and remain idle for 25 minutes to monitor operations, then return to the storage area. Proceed to the inspection station to pick up the testing kit. Deliver it to the laboratory for analysis. After that, visit the storage room and wait for the toolbox to be ready. Carry it to the maintenance workshop, unload it, and remain there for 5 minutes before moving back to the start position.",
+  {
+    "instruction": "Head to the assembly line to pick up the gearbox. Deliver it to the maintenance room, ensuring it is unloaded. Then, proceed to the control tower and stay there for 10 minutes before returning to the start position. Navigate to the loading dock to collect the shipment of screws. Transfer them to the storage area. Once unloaded, proceed to the central hub and remain idle for 25 minutes to monitor operations, then return to the storage area. Proceed to the inspection station to pick up the testing kit. Deliver it to the laboratory for analysis. After that, visit the storage room and wait for the toolbox to be ready. Carry it to the maintenance workshop, unload it, and remain there for 5 minutes before moving back to the start position.",
     "json": {
-        "instuction": [
-                {
-                    "action": "go_to",
-                    "location": "assembly line",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_payload_ready",
-                    "location": "assembly line",
-                    "object": [
-                        {
-                            "description": "gearbox",
-                            "num": "1"
-                        }
-                    ],
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "maintenance room",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_payload_removal",
-                    "location": "maintenance room",
-                    "object": [
-                        {
-                            "description": "gearbox",
-                            "num": "1"
-                        }
-                    ],
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "control tower",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_seconds",
-                    "location": "control tower",
-                    "object": null,
-                    "duration": 600
-                },
-                {
-                    "action": "go_to",
-                    "location": "start position",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "loading dock",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_payload_ready",
-                    "location": "loading dock",
-                    "object": [
-                        {
-                            "description": "shipment of screws",
-                            "num": -1
-                        }
-                    ],
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "storage area",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_payload_removal",
-                    "location": "storage area",
-                    "object": [
-                        {
-                            "description": "shipment of screws",
-                            "num": -1
-                        }
-                    ],
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "central hub",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_seconds",
-                    "location": "central hub",
-                    "object": null,
-                    "duration": 1500
-                },
-                {
-                    "action": "go_to",
-                    "location": "storage area",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "inspection station",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_payload_ready",
-                    "location": "inspection station",
-                    "object": [
-                        {
-                            "description": "testing kit",
-                            "num": "1"
-                        }
-                    ],
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "laboratory",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_payload_removal",
-                    "location": "laboratory",
-                    "object": [
-                        {
-                            "description": "testing kit",
-                            "num": "1"
-                        }
-                    ],
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "storage room",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_payload_ready",
-                    "location": "storage room",
-                    "object": [
-                        {
-                            "description": "toolbox",
-                            "num": "1"
-                        }
-                    ],
-                    "duration": null
-                },
-                {
-                    "action": "go_to",
-                    "location": "maintenance workshop",
-                    "object": null,
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_payload_removal",
-                    "location": "maintenance workshop",
-                    "object": [
-                        {
-                            "description": "toolbox",
-                            "num": "1"
-                        }
-                    ],
-                    "duration": null
-                },
-                {
-                    "action": "wait_for_seconds",
-                    "location": "maintenance workshop",
-                    "object": null,
-                    "duration": 300
-                },
-                {
-                    "action": "go_to",
-                    "location": "start position",
-                    "object": null,
-                    "duration": null
-                }
-            ]
-        }
-    },
-    {
-        "instruction": "Go to the charging station and wait for 15 minutes before proceeding to the dispatch area.",
-        "json": {
-            "instruction": [
-                { "action": "go_to", "location": "charging station", "object": null, "duration": null },
-                { "action": "wait_for_seconds", "location": "charging station", "object": null, "duration": 900 },
-                { "action": "go_to", "location": "dispatch area", "object": null, "duration": null }
-            ]
-        }
-    },
-    {
-        "instruction": "Move to the warehouse to pick up a crate of supplies, then deliver it to the assembly area.",
-        "json": {
-            "instruction": [
-                { "action": "go_to", "location": "warehouse", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "warehouse", "object": [{ "description": "crate of supplies", "num": "1" }], "duration": null },
-                { "action": "go_to", "location": "assembly area", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "assembly area", "object": [{ "description": "crate of supplies", "num": "1" }], "duration": null }
-            ]
-        }
-    },
-    {
-        "instruction": "Head to the docking station, pick up a batch of materials, and transport it to the production line.",
-        "json": {
-            "instruction": [
-                { "action": "go_to", "location": "docking station", "object": null, "duration": null },
-                { "action": "wait_for_payload_ready", "location": "docking station", "object": [{ "description": "batch of materials", "num": -1 }], "duration": null },
-                { "action": "go_to", "location": "production line", "object": null, "duration": null },
-                { "action": "wait_for_payload_removal", "location": "production line", "object": [{ "description": "batch of materials", "num": -1 }], "duration": null }
-            ]
-        }
-    },
-    {
-        "instruction": "Travel to the maintenance bay for system diagnostics, stay there for 20 minutes, then return to the main hub.",
-        "json": {
-            "instruction": [
-                { "action": "go_to", "location": "maintenance bay", "object": null, "duration": null },
-                { "action": "wait_for_seconds", "location": "maintenance bay", "object": null, "duration": 1200 },
-                { "action": "go_to", "location": "main hub", "object": null, "duration": null }
-            ]
-        }
-    },
+      "instuction": [
         {
-      "instruction": "Move to the greenhouse, pick up flower pots, and drop them at the garden entrance.",
-      "json": {"instruction": [
-        {"action": "go_to", "location": "greenhouse", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "greenhouse", "object": [{"description": "flower pots", "num": -1}], "duration": null},
-        {"action": "go_to", "location": "garden entrance", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "garden entrance", "object": [{"description": "flower pots", "num": -1}], "duration": null}
-      ]}
-    },
-    {
-      "instruction": "Collect boxes from the loading bay and deliver them to storage room 2.",
-      "json": {"instruction": [
-        {"action": "go_to", "location": "loading bay", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "loading bay", "object": [{"description": "boxes", "num": -1}], "duration": null},
-        {"action": "go_to", "location": "storage room 2", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "storage room 2", "object": [{"description": "boxes", "num": -1}], "duration": null}
-      ]}
-    },
-    {
-      "instruction": "Retrieve fertilizer bags from shed A and drop them off at the orchard gate.",
-      "json": {"instruction": [
-        {"action": "go_to", "location": "shed A", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "shed A", "object": [{"description": "fertilizer bags", "num": -1}], "duration": null},
-        {"action": "go_to", "location": "orchard gate", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "orchard gate", "object": [{"description": "fertilizer bags", "num": -1}], "duration": null}
-      ]}
-    },
-    {
-      "instruction": "Pick up harvested carrots from the vegetable patch and take them to the farmhouse.",
-      "json": {"instruction": [
-        {"action": "go_to", "location": "vegetable patch", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "vegetable patch", "object": [{"description": "harvested carrots", "num": -1}], "duration": null},
-        {"action": "go_to", "location": "farmhouse", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "farmhouse", "object": [{"description": "harvested carrots", "num": -1}], "duration": null}
-      ]}
-    },
-    {
-      "instruction": "Transport sandbags from the depot to floodgate 3.",
-      "json": {"instruction": [
-        {"action": "go_to", "location": "depot", "object": null, "duration": null},
-        {"action": "wait_for_payload_ready", "location": "depot", "object": [{"description": "sandbags", "num": -1}], "duration": null},
-        {"action": "go_to", "location": "floodgate 3", "object": null, "duration": null},
-        {"action": "wait_for_payload_removal", "location": "floodgate 3", "object": [{"description": "sandbags", "num": -1}], "duration": null}
-      ]}
+          "action": "go_to",
+          "location": "assembly line",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "assembly line",
+          "object": [
+            {
+              "description": "gearbox",
+              "num": 1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "maintenance room",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "maintenance room",
+          "object": [
+            {
+              "description": "gearbox",
+              "num": 1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "control tower",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_seconds",
+          "location": "control tower",
+          "object": null,
+          "duration": 600
+        },
+        {
+          "action": "go_to",
+          "location": "start position",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "loading dock",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "loading dock",
+          "object": [
+            {
+              "description": "shipment of screws",
+              "num": -1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "storage area",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "storage area",
+          "object": [
+            {
+              "description": "shipment of screws",
+              "num": -1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "central hub",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_seconds",
+          "location": "central hub",
+          "object": null,
+          "duration": 1500
+        },
+        {
+          "action": "go_to",
+          "location": "storage area",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "inspection station",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "inspection station",
+          "object": [
+            {
+              "description": "testing kit",
+              "num": 1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "laboratory",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "laboratory",
+          "object": [
+            {
+              "description": "testing kit",
+              "num": 1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "storage room",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "storage room",
+          "object": [
+            {
+              "description": "toolbox",
+              "num": 1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "maintenance workshop",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "maintenance workshop",
+          "object": [
+            {
+              "description": "toolbox",
+              "num": 1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "wait_for_seconds",
+          "location": "maintenance workshop",
+          "object": null,
+          "duration": 300
+        },
+        {
+          "action": "go_to",
+          "location": "start position",
+          "object": null,
+          "duration": null
+        }
+      ]
     }
+  },
+  {
+    "instruction": "Go to the charging station and wait for 15 minutes before proceeding to the dispatch area.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "charging station",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_seconds",
+          "location": "charging station",
+          "object": null,
+          "duration": 900
+        },
+        {
+          "action": "go_to",
+          "location": "dispatch area",
+          "object": null,
+          "duration": null
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Move to the warehouse to pick up a crate of supplies, then deliver it to the assembly area.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "warehouse",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "warehouse",
+          "object": [
+            {
+              "description": "crate of supplies",
+              "num": 1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "assembly area",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "assembly area",
+          "object": [
+            {
+              "description": "crate of supplies",
+              "num": 1
+            }
+          ],
+          "duration": null
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Head to the docking station, pick up a batch of materials, and transport it to the production line.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "docking station",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "docking station",
+          "object": [
+            {
+              "description": "batch of materials",
+              "num": -1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "production line",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "production line",
+          "object": [
+            {
+              "description": "batch of materials",
+              "num": -1
+            }
+          ],
+          "duration": null
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Travel to the maintenance bay for system diagnostics, stay there for 20 minutes, then return to the main hub.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "maintenance bay",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_seconds",
+          "location": "maintenance bay",
+          "object": null,
+          "duration": 1200
+        },
+        {
+          "action": "go_to",
+          "location": "main hub",
+          "object": null,
+          "duration": null
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Move to the greenhouse, pick up flower pots, and drop them at the garden entrance.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "greenhouse",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "greenhouse",
+          "object": [
+            {
+              "description": "flower pots",
+              "num": -1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "garden entrance",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "garden entrance",
+          "object": [
+            {
+              "description": "flower pots",
+              "num": -1
+            }
+          ],
+          "duration": null
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Collect boxes from the loading bay and deliver them to storage room 2.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "loading bay",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "loading bay",
+          "object": [
+            {
+              "description": "boxes",
+              "num": -1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "storage room 2",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "storage room 2",
+          "object": [
+            {
+              "description": "boxes",
+              "num": -1
+            }
+          ],
+          "duration": null
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Retrieve fertilizer bags from shed A and drop them off at the orchard gate.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "shed A",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "shed A",
+          "object": [
+            {
+              "description": "fertilizer bags",
+              "num": -1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "orchard gate",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "orchard gate",
+          "object": [
+            {
+              "description": "fertilizer bags",
+              "num": -1
+            }
+          ],
+          "duration": null
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Pick up harvested carrots from the vegetable patch and take them to the farmhouse.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "vegetable patch",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "vegetable patch",
+          "object": [
+            {
+              "description": "harvested carrots",
+              "num": -1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "farmhouse",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "farmhouse",
+          "object": [
+            {
+              "description": "harvested carrots",
+              "num": -1
+            }
+          ],
+          "duration": null
+        }
+      ]
+    }
+  },
+  {
+    "instruction": "Transport sandbags from the depot to floodgate 3.",
+    "json": {
+      "instruction": [
+        {
+          "action": "go_to",
+          "location": "depot",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_ready",
+          "location": "depot",
+          "object": [
+            {
+              "description": "sandbags",
+              "num": -1
+            }
+          ],
+          "duration": null
+        },
+        {
+          "action": "go_to",
+          "location": "floodgate 3",
+          "object": null,
+          "duration": null
+        },
+        {
+          "action": "wait_for_payload_removal",
+          "location": "floodgate 3",
+          "object": [
+            {
+              "description": "sandbags",
+              "num": -1
+            }
+          ],
+          "duration": null
+        }
+      ]
+    }
+  }
 ]
