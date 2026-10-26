@@ -4,8 +4,8 @@ from __future__ import annotations
 from dataclasses import dataclass, asdict
 from typing import Any, Dict, List, Sequence, Tuple, Union
 
-from eval_dataset.syntax_validator import SyntaxValidator
-from eval_dataset.logic_validator import LogicValidator
+from validator.syntax_validator import SyntaxValidator
+from validator.logic_validator import LogicValidator
 
 
 @dataclass
@@ -53,10 +53,10 @@ class ValidatorAPI:
         if isinstance(data, list):
             payloads: List[Dict[str, Any]] = []
             for x in data:
-                if isinstance(x, dict) and "instruction" in x:
-                    payloads.append(x)
-                elif isinstance(x, dict) and "json" in x and isinstance(x["json"], dict):
+                if isinstance(x, dict) and "json" in x and isinstance(x["json"], dict):
                     payloads.append(x["json"])
+                elif isinstance(x, dict) and "instruction" in x:
+                    payloads.append(x)
                 else:
                     raise TypeError(f"List item must be a payload dict or a dataset entry with 'json'. Got: {type(x)}")
             return payloads, False
@@ -75,13 +75,13 @@ class ValidatorAPI:
                         raise TypeError(f"data[] item must be a payload dict or dataset entry with 'json'. Got: {type(x)}")
                 return payloads, False
 
-            # direct payload dict
-            if "instruction" in data:
-                return [data], True
-
             # dataset entry dict: {"json": {...}}
             if "json" in data and isinstance(data["json"], dict) and "instruction" in data["json"]:
                 return [data["json"]], True
+
+            # direct payload dict
+            if "instruction" in data:
+                return [data], True
 
         raise TypeError("Input must be a payload dict, a list of payloads, a dataset entry with 'json', or {'data':[...]}.")
 
