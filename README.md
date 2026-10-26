@@ -41,7 +41,7 @@ Seed sampling is handled by [`gm_sample_picker.py`](./gm_sample_picker.py).
 Requires Python 3.10+ and an [OpenAI API key](https://platform.openai.com/api-keys).
 
 ```bash
-git clone https://github.com/danielhorti/DatasetSpinner.git
+git clone https://github.com/ABC-iRobotics/DatasetSpinner.git
 cd DatasetSpinner
 pip install -r requirements.txt
 
