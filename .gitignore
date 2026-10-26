@@ -1,2 +1,5 @@
 .ipynb_checkpoints/
 __pycache__/
+logs/
+openai_key.txt
+.env
